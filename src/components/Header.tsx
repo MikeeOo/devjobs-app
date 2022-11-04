@@ -11,6 +11,7 @@ const Header = (): JSX.Element => {
           <NavLink to="/add-job">Add Job</NavLink>
           <NavLink to="/your-offers">Your Offers</NavLink>
           <NavLink to="/your-applications">Your Applications</NavLink>
+          <NavLink to="/login">Sign in</NavLink>
       </>
   )
 }
