@@ -1,3 +1,6 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../config/firebase";
+
 import {Formik, Form, Field} from "formik";
 import {registerSchema} from "../yup/validation";
 
@@ -9,6 +12,8 @@ const RegisterPage = (): JSX.Element => {
           <Formik onSubmit={(values) => {
               console.log(values);
 
+              createUserWithEmailAndPassword(auth, values.email, values.newPassword)
+                  .then(usr => console.log(usr))
           }}
                   validationSchema={registerSchema}
                   initialValues={{
