@@ -3,10 +3,9 @@
 {{--<html lang="en" data-theme="light" style="color-scheme: dark;" class=" ">--}}
 @include('partials.head')
 <body>
+@include('partials.navbar')
 <main>
-{{--    @include()--}}
-    <div>Default Test</div>
-    @yield('content')
+@yield('content')
 </main>
 </body>
 </html>
