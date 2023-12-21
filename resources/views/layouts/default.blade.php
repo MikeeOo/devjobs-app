@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 {{--<html lang="en" data-theme="light" style="color-scheme: dark;" class=" ">--}}
 @include('partials.head')
-<body>
+<body class="font-headings">
 @include('partials.navbar')
 <main class="mt-[60px]">
 @yield('content')
