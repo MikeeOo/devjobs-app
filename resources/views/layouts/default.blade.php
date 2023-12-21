@@ -4,7 +4,7 @@
 @include('partials.head')
 <body>
 @include('partials.navbar')
-<main>
+<main class="mt-[60px]">
 @yield('content')
 </main>
 </body>
