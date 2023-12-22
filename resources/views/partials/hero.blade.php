@@ -1,4 +1,4 @@
-<section class="h-72 flex flex-col justify-center align-center text-center mb-4">
+<section class="flex flex-col justify-center align-center text-center py-16">
     <h1 class="text-6xl uppercase">
         <span class="text-secondary">FIND </span>A NEW JOB...
     </h1>
