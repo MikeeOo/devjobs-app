@@ -1,4 +1,4 @@
-<form action="">
+<form action="" class="w-11/12 mx-auto">
     <div class="relative max-w-screen-md m-auto">
         <div class="absolute top-4 left-5 text-content3">
             <i class="fa fa-search"></i>
