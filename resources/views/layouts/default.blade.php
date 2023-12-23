@@ -7,5 +7,8 @@
 <main class="mt-[60px]">
 @yield('content')
 </main>
+<div class="h-[60px]">
+@include('partials.footer')
+</div>
 </body>
 </html>
