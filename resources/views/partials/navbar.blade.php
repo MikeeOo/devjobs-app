@@ -7,7 +7,7 @@
         </div>
         <ul class="navbar-end uppercase">
             <li>
-                <a href="/" class="link navbar-item text-sm hover:underline">
+                <a href="/" class="link navbar-item text-sm text-content1 link-underline-hover">
                     Log in
                 </a>
             </li>
@@ -19,3 +19,5 @@
         </ul>
     </div>
 </nav>
+
+

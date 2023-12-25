@@ -7,7 +7,8 @@
 {{--        </a>--}}
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
-                <h3 class="text-2xl hover:underline hover:text-content2">
+                <h3 class="text-2xl link-underline-hover hover:text-content2">
+
                     <a href="/">Full Stack JavaScript Developer</a>
                 </h3>
                 <div class="text-xl font-bold mb-4">DigitalSprint Innovations</div>
@@ -38,7 +39,7 @@
         <img src="{{url('storage/images/tech-logo.png')}}" alt="" class="hidden md:block rounded-l-lg w-48 h-48" />
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
-                <h3 class="text-2xl hover:underline hover:text-content2">
+                <h3 class="text-2xl link-underline-hover hover:text-content2">
                     <a href="/">Frontend React Developer</a>
                 </h3>
                 <div class="text-xl font-bold mb-4">TechMinds Ltd.</div>
@@ -67,7 +68,7 @@
         <img src="{{url('storage/images/code-logo.png')}}" alt="" class="hidden md:block rounded-l-lg w-48 h-48" />
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
-                <h3 class="text-2xl hover:underline hover:text-content2">
+                <h3 class="text-2xl link-underline-hover hover:text-content2">
                     <a href="/">Senior Python/Django Engineer</a>
                 </h3>
                 <div class="text-xl font-bold mb-4">CodeCraft Labs</div>
@@ -96,7 +97,7 @@
         <img src="{{url('storage/images/quantum-logo.png')}}" alt="" class="hidden md:block rounded-l-lg w-48 h-48" />
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
-                <h3 class="text-2xl hover:underline hover:text-content2">
+                <h3 class="text-2xl link-underline-hover hover:text-content2">
                     <a href="/">Full Stack PHP Developer</a>
                 </h3>
                 <div class="text-xl font-bold mb-4">QuantumTech Solutions</div>
