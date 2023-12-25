@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="mx-auto flex w-11/12 sm:w-10/12 max-w-md flex-col gap-6 bg-backgroundSecondary mt-36 py-8 px-4 sm:px-8 sm:py-8 rounded-lg">
+<div class="mx-auto flex w-11/12 sm:w-10/12 max-w-md flex-col gap-6 bg-backgroundSecondary sm:mt-36 py-8 px-4 sm:px-8 sm:py-8 rounded-lg">
     <div class="text-center">
         <h2 class="text-2xl font-semibold mb-2">Sign In</h2>
         <p class="text-sm">Sign in to access your account</p>
@@ -11,7 +11,7 @@
         <div class="form-group">
             <div class="form-field relative pb-2">
                 <label class="form-label" for="email">Email address</label>
-                <input placeholder="Email..." type="email" name="email" id="email"
+                <input placeholder="Enter your email" type="email" name="email" id="email"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]" />
 
                 <label class="form-label absolute bottom-0 left-0 translate-y-2/3"><span class="form-label-alt text-error font-bold">Please enter a valid email.</span></label>
@@ -21,7 +21,7 @@
             <div class="form-field relative pb-2">
                 <label class="form-label" for="password">Password</label>
                 <div class="form-control">
-                    <input placeholder="Password..." type="password" name="password" id="password"
+                    <input placeholder="Enter password" type="password" name="password" id="password"
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]" />
                 </div>
 
