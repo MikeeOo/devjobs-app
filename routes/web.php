@@ -32,3 +32,7 @@ Route::get('/listing', function () {
 Route::get('/create', function () {
     return view('pages.create');
 });
+
+Route::get('/edit', function () {
+    return view('pages.edit');
+});
