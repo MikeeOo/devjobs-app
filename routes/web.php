@@ -28,3 +28,7 @@ Route::get('/register', function () {
 Route::get('/listing', function () {
     return view('pages.listing');
 });
+
+Route::get('/create', function () {
+    return view('pages.create');
+});
