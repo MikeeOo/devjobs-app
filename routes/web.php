@@ -36,3 +36,7 @@ Route::get('/create', function () {
 Route::get('/edit', function () {
     return view('pages.edit');
 });
+
+Route::get('/manage', function () {
+    return view('pages.manage');
+});
