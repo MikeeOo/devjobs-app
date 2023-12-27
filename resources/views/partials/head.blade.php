@@ -33,5 +33,6 @@
         };
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css"/>
+    @vite('resources/js/app.js')
     <title>devjobs-app</title>
 </head>
