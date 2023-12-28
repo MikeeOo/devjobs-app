@@ -5,7 +5,7 @@
         "prettier-plugin-tailwindcss",
         "prettier-plugin-organize-attributes"
     ],
-    "attributeGroups": ["^class$", "^id$", "^name$", "^data-", "^src$", "^for$", "^type$", "^href$", "^value$", "^rows$", "^placeholder$", "^title$", "^alt$", "^role$", "^aria-", "^tabindex$", "^style$"],
+    "attributeGroups": ["^id$", "^name$", "^data-", "^src$", "^for$", "^type$", "^href$", "^value$", "^rows$", "^placeholder$", "^title$", "^alt$", "^role$", "^method", "^action", "^class$", "^aria-", "^tabindex$", "^style$"],
     "overrides": [
         {
             "files": [
