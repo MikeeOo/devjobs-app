@@ -15,24 +15,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        main: ["Noto Sans", "sans-serif"],
-                        headings: ["Space Grotesk", "sans-serif"],
-                    },
-                    colors: {
-                        laravel: "#ef3b2d",
-                    },
-                },
-            },
-        };
-    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css"/>
+    @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <title>devjobs-app</title>
 </head>
