@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import rippleui from "rippleui";
 export default {
   content: [
       "./resources/**/*.blade.php",
@@ -12,6 +13,6 @@ export default {
         },
     },
   },
-  plugins: [],
+    plugins: [rippleui],
 }
 
