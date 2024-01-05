@@ -1,6 +1,6 @@
-@extends("layouts.default")
+@extends('layouts.default')
 
-@section("content")
+@section('content')
     <div
         class="mx-auto flex w-11/12 sm:w-10/12 max-w-md flex-col gap-6 bg-backgroundSecondary sm:mt-36 py-8 px-4 sm:px-8 sm:py-8 rounded-lg"
     >
@@ -9,7 +9,8 @@
             <p class="text-sm">Create an account to post gigs</p>
         </div>
 
-        <form action="">
+        <form method="post" action="{{ route('register') }}">
+            @csrf
             <div class="form-group">
                 <div class="form-field relative pb-2">
                     <label for="name" class="form-label">Full Name</label>
