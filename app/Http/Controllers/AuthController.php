@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Contracts\View\View;
 
 class AuthController extends Controller
@@ -11,7 +12,7 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function register()
+    public function register(RegisterRequest $request)
     {
     }
 
