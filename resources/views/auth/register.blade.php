@@ -104,7 +104,9 @@
                     </div>
                 </div>
                 <div class="form-control justify-center">
-                    <a class="link text-content3 text-sm link-underline-hover">Already have an account? Log in.</a>
+                    <a href="{{ route('login') }}" class="link text-content3 text-sm link-underline-hover">
+                        Already have an account? Log in.
+                    </a>
                 </div>
             </div>
         </form>
