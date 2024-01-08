@@ -17,12 +17,15 @@
                         id="name"
                         name="name"
                         type="text"
+                        value="{{ old('name') }}"
                         placeholder="e.g., Jane"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Please enter a valid name.</span>
-                    </label>
+                    @error('name')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $errors->first('name') }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative pb-2">
                     <label for="surname" class="form-label">Surname</label>
@@ -30,12 +33,15 @@
                         id="surname"
                         name="surname"
                         type="text"
+                        value="{{ old('surname') }}"
                         placeholder="e.g., Doe"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Please enter a valid surname.</span>
-                    </label>
+                    @error('surname')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $errors->first('surname') }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative pb-2">
                     <label for="login" class="form-label">
@@ -46,12 +52,15 @@
                         id="login"
                         name="login"
                         type="text"
+                        value="{{ old('login') }}"
                         placeholder="e.g., CodeWarrior777"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Please enter a valid login.</span>
-                    </label>
+                    @error('login')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $errors->first('login') }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative pb-2">
                     <label for="email" class="form-label">Your email</label>
@@ -59,12 +68,15 @@
                         id="email"
                         name="email"
                         type="email"
+                        value="{{ old('email') }}"
                         placeholder="Enter your email"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Please enter a valid email.</span>
-                    </label>
+                    @error('email')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $errors->first('email') }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative pb-2">
                     <label for="password" class="form-label">Password</label>
@@ -77,9 +89,11 @@
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Invalid password.</span>
-                    </label>
+                    @error('password')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $errors->first('password') }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative pb-2">
                     <label for="password_repeat" class="form-label">Confirm password</label>
@@ -92,9 +106,13 @@
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt text-error font-bold">Passwords do not match.</span>
-                    </label>
+                    @error('password_repeat')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">
+                                {{ $errors->first('password_repeat') }}
+                            </span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field pt-5">
                     <div class="form-control">
