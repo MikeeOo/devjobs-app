@@ -17,12 +17,15 @@
                         id="email"
                         name="email"
                         type="email"
+                        value="{{ old('email') }}"
                         placeholder="Enter your email"
                         class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid email.</span>
-                    </label>
+                    @error('email')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt font-bold text-error">{{ $errors->first('email') }}</span>
+                        </label>
+                    @enderror
                 </div>
 
                 <div class="form-field relative pb-2">
@@ -36,9 +39,11 @@
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Invalid password.</span>
-                    </label>
+                    @error('password')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt font-bold text-error">Invalid password.</span>
+                        </label>
+                    @enderror
                 </div>
                 {{-- Remember me & password recovery --}}
                 {{-- <div class="form-field"> --}}
