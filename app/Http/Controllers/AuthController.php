@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
@@ -26,7 +27,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function login()
+    public function login(LoginRequest $request)
     {
     }
 
