@@ -1,6 +1,6 @@
-@extends("layouts.default")
+@extends('layouts.default')
 
-@section("content")
+@section('content')
     <div
         class="mx-auto flex w-11/12 max-w-md flex-col gap-6 rounded-lg bg-backgroundSecondary px-4 py-8 sm:mt-36 sm:w-10/12 sm:px-8 sm:py-8"
     >
@@ -8,8 +8,8 @@
             <h2 class="mb-2 text-2xl font-semibold">Sign In</h2>
             <p class="text-sm">Sign in to access your account</p>
         </div>
-
-        <form action="">
+        <form method="post" action="{{ route('login') }}">
+            @csrf
             <div class="form-group">
                 <div class="form-field relative pb-2">
                     <label for="email" class="form-label">Email address</label>
