@@ -89,6 +89,7 @@
                             name="password"
                             type="password"
                             placeholder="min. 8 chars, 1 special, 1 number"
+                            autocomplete="on"
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>
@@ -106,6 +107,7 @@
                             name="password_repeat"
                             type="password"
                             placeholder="Repeat your password"
+                            autocomplete="on"
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>

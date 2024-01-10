@@ -39,6 +39,7 @@
                             name="password"
                             type="password"
                             placeholder="Enter password"
+                            autocomplete="on"
                             class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                         />
                     </div>
