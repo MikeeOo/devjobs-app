@@ -68,12 +68,10 @@
                     </div>
                 </div>
 
-                <div class="">
-                    <div class="form-control justify-center">
-                        <a class="link link-underline-hover text-sm text-content3">
-                            Don't have an account yet? Sign up.
-                        </a>
-                    </div>
+                <div class="form-control justify-center">
+                    <a href="{{ route('register.view') }}" class="link link-underline-hover text-sm text-content3">
+                        Don't have an account yet? Sign up.
+                    </a>
                 </div>
             </div>
         </form>
