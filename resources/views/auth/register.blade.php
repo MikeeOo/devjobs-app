@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="form-control justify-center">
-                    <a href="{{ route('login') }}" class="link text-content3 text-sm link-underline-hover">
+                    <a href="{{ route('login.view') }}" class="link text-content3 text-sm link-underline-hover">
                         Already have an account? Log in.
                     </a>
                 </div>
