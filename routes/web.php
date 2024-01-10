@@ -18,23 +18,29 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/register', [AuthController::class, 'registerView'])->name('register.view');
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/login', [AuthController::class, 'loginView'])->name('login.view');
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-
 Route::get('/listing', function () {
     return view('pages.listing');
 });
 
-Route::get('/create', function () {
-    return view('pages.create');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/register', [AuthController::class, 'registerView'])->name('register.view');
+    Route::post('/register', [AuthController::class, 'register'])->name('register');
+    Route::get('/login', [AuthController::class, 'loginView'])->name('login.view');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
 });
 
-Route::get('/edit', function () {
-    return view('pages.edit');
-});
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/manage', function () {
-    return view('pages.manage');
+    Route::get('/create', function () {
+        return view('pages.create');
+    });
+
+    Route::get('/edit', function () {
+        return view('pages.edit');
+    });
+
+    Route::get('/manage', function () {
+        return view('pages.manage');
+    });
 });
