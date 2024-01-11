@@ -7,12 +7,32 @@
             </a>
         </div>
         <ul class="navbar-end uppercase">
-            <li>
-                <a href="/" class="link navbar-item text-sm text-content1 link-underline-hover">Log in</a>
-            </li>
-            <li>
-                <a href="/" class="btn btn-outline-secondary navbar-item hover:!text-white">Sign up</a>
-            </li>
+            @guest
+                <li>
+                    <a
+                        href="{{ route('login.view') }}"
+                        class="link navbar-item text-sm text-content1 link-underline-hover"
+                    >
+                        Log in
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="{{ route('register.view') }}"
+                        class="btn btn-outline-secondary navbar-item hover:!text-white"
+                    >
+                        Sign up
+                    </a>
+                </li>
+            @endguest
+
+            @auth
+                <li>
+                    <a href="{{ route('logout') }}" class="btn btn-outline-secondary navbar-item hover:!text-white">
+                        Log out
+                    </a>
+                </li>
+            @endauth
         </ul>
     </div>
 </nav>
