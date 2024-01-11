@@ -18,8 +18,6 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
-
-    @vite("resources/css/app.css")
-    @vite("resources/js/app.js")
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>devjobs-app</title>
 </head>
