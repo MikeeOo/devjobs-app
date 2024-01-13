@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Interfaces\IRepository;
+use App\Models\Job;
 
 class JobRepository implements IRepository
 {
@@ -18,7 +19,7 @@ class JobRepository implements IRepository
 
     public function create($data)
     {
-        // TODO: Implement create() method.
+        return Job::create($data);
     }
 
     public function update($id, $data)
