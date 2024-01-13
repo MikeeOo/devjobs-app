@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +33,7 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/create', function () {
-        return view('pages.create');
-    });
+    Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
 
     Route::get('/edit', function () {
         return view('pages.edit');
