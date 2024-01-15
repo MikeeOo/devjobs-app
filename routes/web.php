@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
+    Route::post('/jobs/store', [JobController::class, 'store'])->name('jobs.store');
 
     Route::get('/edit', function () {
         return view('pages.edit');
