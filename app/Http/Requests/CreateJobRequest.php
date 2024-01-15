@@ -29,7 +29,7 @@ class CreateJobRequest extends FormRequest
             //            'website' => 'required|min:2|max:255',
             //            'tags' => 'required|min:2|max:255',
             //            'logo' => 'required|min:2|max:255',
-            'description' => 'required|min:2',
+            'body' => 'required|min:2',
         ];
     }
 }
