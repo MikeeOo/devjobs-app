@@ -1,6 +1,6 @@
-@extends("layouts.default")
+@extends('layouts.default')
 
-@section("content")
+@section('content')
     <div class="w-11/12 max-w-md mx-auto py-6">
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
@@ -102,7 +102,7 @@
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
                         id="description"
-                        name="description"
+                        name="body"
                         rows="10"
                         placeholder="Include tasks, requirements, salary, etc"
                         class="textarea textarea-solid max-w-full focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
