@@ -28,6 +28,14 @@
 
             @auth
                 <li>
+                    <a
+                        href="{{ route('jobs.create') }}"
+                        class="link navbar-item text-sm text-content1 link-underline-hover"
+                    >
+                        Create a job
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('logout') }}" class="btn btn-outline-secondary navbar-item hover:!text-white">
                         Log out
                     </a>

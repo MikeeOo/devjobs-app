@@ -5,8 +5,22 @@
     </h1>
     <p class="my-4 text-2xl text-content2">or something...</p>
     <div>
-        <a href="/" class="btn btn-outline-secondary navbar-item px-6 uppercase hover:!text-white">
-            Sign Up to List a Gig
-        </a>
+        @guest
+            <a
+                href="{{ route('register.view') }}"
+                class="btn btn-outline-secondary navbar-item px-6 uppercase hover:!text-white"
+            >
+                Sign Up to List a Gig
+            </a>
+        @endguest
+
+        @auth
+            <a
+                href="{{ route('jobs.create') }}"
+                class="btn btn-outline-secondary navbar-item px-6 uppercase hover:!text-white"
+            >
+                Create a Gig
+            </a>
+        @endauth
     </div>
 </section>
