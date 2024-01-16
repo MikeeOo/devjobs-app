@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateJobRequest;
+use App\Repositories\JobRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
+    private JobRepository $jobRepository;
+
+    public function __construct()
+    {
+        $this->jobRepository = new JobRepository();
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -30,6 +38,8 @@ class JobController extends Controller
      */
     public function store(CreateJobRequest $request): RedirectResponse
     {
+        $this->jobRepository->create($request->all());
+
         return redirect('/');
     }
 
