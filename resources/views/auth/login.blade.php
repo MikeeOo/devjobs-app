@@ -2,7 +2,7 @@
 
 @section('content')
     <script type="module">
-        handleErrorsInputs();
+        handleErrors();
     </script>
     <div
         class="mx-auto flex w-11/12 max-w-md flex-col gap-6 rounded-lg bg-backgroundSecondary px-4 py-8 sm:mt-36 sm:w-10/12 sm:px-8 sm:py-8"

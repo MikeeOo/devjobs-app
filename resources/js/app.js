@@ -1,4 +1,4 @@
 import "./bootstrap";
-import { handleErrorsInputs } from "./utilities.js";
+import { handleErrors } from "./utilities.js";
 
-window.handleErrorsInputs = handleErrorsInputs;
+window.handleErrors = handleErrors;

@@ -1,6 +1,6 @@
-export const handleErrorsInputs = () =>
+export const handleErrors = () =>
     document
-        .querySelectorAll("input")
-        .forEach((input) =>
-            input.addEventListener("keyup", (e) => (e.target.nextSibling ? e.target.nextSibling.remove() : null)),
+        .querySelectorAll("input, textarea")
+        .forEach((htmlElement) =>
+            htmlElement.addEventListener("keyup", (e) => (e.target.nextSibling ? e.target.nextSibling.remove() : null)),
         );
