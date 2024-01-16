@@ -149,7 +149,12 @@
                         </button>
                     </div>
                     <div>
-                        <a href="/" class="btn btn-solid-secondary text-base rounded-none rounded-r-lg">Back</a>
+                        <a
+                            href="{{ url()->previous() }}"
+                            class="btn btn-solid-secondary text-base rounded-none rounded-r-lg"
+                        >
+                            Back
+                        </a>
                     </div>
                 </div>
             </div>
