@@ -1,4 +1,5 @@
 import "./bootstrap";
-import { handleErrors } from "./utilities.js";
+import { handleErrors, handleFlashMessage } from "./utilities.js";
 
 window.handleErrors = handleErrors;
+window.handleFlashMessage = handleFlashMessage;

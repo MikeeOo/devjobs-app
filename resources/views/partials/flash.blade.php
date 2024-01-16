@@ -1,5 +1,8 @@
 @if (session()->has('success'))
-    <div class="bg-green-300 max-w-screen-xl m-auto relative">
+    <script type="module">
+        handleFlashMessage();
+    </script>
+    <div id="flash" class="bg-green-300 max-w-screen-xl m-auto relative">
         <div
             class="alert alert-success max-w-sm backdrop-blur-sm bg-green-600/40 z-50 absolute right-0 mt-[-40px] mr-2"
         >
@@ -13,11 +16,11 @@
             </svg>
             <div class="flex w-full justify-between">
                 <div class="flex flex-col">
-                    <span>Title</span>
-                    <span class="text-content2">Long sample text</span>
+                    <span>Message</span>
+                    <span class="text-content2">{{ session('success') }}</span>
                 </div>
             </div>
-            <div class="pr-2 text-content2">05...</div>
+            <div id="counter" class="pr-2 text-content2">05...</div>
         </div>
     </div>
 @endif
