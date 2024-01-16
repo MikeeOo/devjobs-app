@@ -17,9 +17,6 @@ class JobController extends Controller
         $this->jobRepository = new JobRepository();
     }
 
-    /**
-     * Display a listing of the resource.
-     */
     public function index(): View
     {
         $jobs = $this->jobRepository->getAll();
@@ -27,17 +24,11 @@ class JobController extends Controller
         return view('jobs.index', compact('jobs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create(): View
     {
         return view('jobs.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(CreateJobRequest $request): RedirectResponse
     {
         $this->jobRepository->create($request->all());
