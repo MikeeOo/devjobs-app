@@ -7,6 +7,7 @@
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
         <form method="post" action="{{ route('jobs.store') }}">
+            @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
                     <label for="company" class="form-label text-lg">Company Name</label>
