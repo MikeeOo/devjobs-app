@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
-        <form action="">
+        <form method="post" action="{{ route('jobs.store') }}">
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
                     <label for="company" class="form-label text-lg">Company Name</label>
