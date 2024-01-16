@@ -4,12 +4,13 @@ namespace App\Repositories;
 
 use App\Interfaces\IRepository;
 use App\Models\Job;
+use Illuminate\Database\Eloquent\Collection;
 
 class JobRepository implements IRepository
 {
-    public function getAll()
+    public function getAll(): Collection
     {
-        // TODO: Implement getAll() method.
+        return Job::all();
     }
 
     public function getById($id)

@@ -20,9 +20,11 @@ class JobController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $jobs = $this->jobRepository->getAll();
+
+        return view('jobs.index', compact('jobs'));
     }
 
     /**

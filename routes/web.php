@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home.view');
+Route::get('/', [JobController::class, 'index'])->name('index');
 
 Route::get('/listing', function () {
     return view('pages.listing');
