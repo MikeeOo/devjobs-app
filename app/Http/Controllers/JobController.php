@@ -40,7 +40,7 @@ class JobController extends Controller
     {
         $this->jobRepository->create($request->all());
 
-        return redirect('/');
+        return redirect('/')->with('success', 'Listing created successfully!');
     }
 
     /**
