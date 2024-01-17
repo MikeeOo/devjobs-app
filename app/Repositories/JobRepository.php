@@ -15,7 +15,7 @@ class JobRepository implements IRepository
 
     public function getById($id)
     {
-        // TODO: Implement getById() method.
+        return Job::find($id);
     }
 
     public function create($data)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateJobRequest;
+use App\Models\Job;
 use App\Repositories\JobRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -36,12 +37,9 @@ class JobController extends Controller
         return redirect('/')->with('success', 'Listing created successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Job $job): View
     {
-        //
+        return view('jobs.single', compact('job'));
     }
 
     /**

@@ -16,7 +16,7 @@
                         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
                             <div>
                                 <h3 class="text-2xl link-underline-hover hover:text-content2">
-                                    <a href="#">{{ $job->title }}</a>
+                                    <a href="{{ route('jobs.show', $job->id) }}">{{ $job->title }}</a>
                                 </h3>
                                 <div class="text-xl font-bold mb-4">DigitalSprint Innovations</div>
                                 <ul class="flex">

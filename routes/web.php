@@ -17,10 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [JobController::class, 'index'])->name('index');
 
-Route::get('/listing', function () {
-    return view('pages.listing');
-});
-
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'registerView'])->name('register.view');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
@@ -42,3 +38,5 @@ Route::group(['middleware' => 'auth'], function () {
         return view('pages.manage');
     });
 });
+
+Route::get('/jobs/{job}', [JobController::class, 'show'])->name('jobs.show');

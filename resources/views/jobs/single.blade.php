@@ -1,10 +1,10 @@
-@extends("layouts.default")
+@extends('layouts.default')
 
-@section("content")
+@section('content')
     <div class="w-11/12 max-w-screen-sm mx-auto py-6">
         <div class="flex flex-col items-center justify-center text-center">
-            <img src="{{ url("storage/images/digital-logo.png") }}" alt="" class="w-36 mb-6" />
-            <h3 class="text-2xl mb-2">Full Stack JavaScript Developer</h3>
+            <img src="{{ url('storage/images/digital-logo.png') }}" alt="" class="w-36 mb-6" />
+            <h3 class="text-2xl mb-2">{{ $job->title }}</h3>
             <div class="text-xl font-bold mb-4">DigitalSprint Innovations</div>
             <ul class="flex">
                 <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">Node.js</a></li>
@@ -21,14 +21,10 @@
                 <h3 class="text-3xl font-bold mb-4">Job Description</h3>
                 <div class="text-lg space-y-6 px-6">
                     <p class="font-main">
-                        Vibecession heirloom ugh post-ironic scenester, edison bulb tote bag. Tbh praxis fingerstache,
-                        man braid gluten-free disrupt venmo roof party gentrify everyday carry dreamcatcher Brooklyn
-                        sriracha.
+                        {{ $job->body }}
                     </p>
                     <p class="font-main">
-                        Ethical biodiesel health goth cupping quinoa tumblr palo santo air plant, marfa everyday carry
-                        beard cloud bread live-edge. Jawn bushwick hashtag vinyl distillery, flannel lo-fi DSA four loko
-                        pabst photo booth.
+                        {{ $job->body }}
                     </p>
                     <a
                         href=""
