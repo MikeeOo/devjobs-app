@@ -28,13 +28,13 @@ class JobRepository implements IRepository
         return Job::create($data);
     }
 
-    public function update($id, $data)
+    public function update($job, $data)
     {
-        // TODO: Implement update() method.
+        return $job->update($data);
     }
 
-    public function delete($id)
+    public function delete($job)
     {
-        // TODO: Implement delete() method.
+        return $job->delete($job);
     }
 }

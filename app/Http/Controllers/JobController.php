@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateJobRequest;
+use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
 use App\Repositories\JobRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
@@ -20,7 +20,7 @@ class JobController extends Controller
 
     public function index(): View
     {
-        $jobs = $this->jobRepository->getAll(4);
+        $jobs = $this->jobRepository->getAll(8);
 
         return view('jobs.index', compact('jobs'));
     }
@@ -34,35 +34,37 @@ class JobController extends Controller
     {
         $this->jobRepository->create($request->all());
 
-        return redirect('/')->with('success', 'Listing created successfully!');
+        return redirect(route('index'))->with('success', 'Listing created successfully!');
     }
 
     public function show(Job $job): View
     {
-        return view('jobs.single', compact('job'));
+        return view('jobs.show', compact('job'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function manage(): View
     {
-        //
+        $jobs = $this->jobRepository->getAll(8);
+
+        return view('jobs.manage', compact('jobs'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function edit(Job $job): View
     {
-        //
+        return view('jobs.edit', compact('job'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function update(UpdateJobRequest $request, Job $job): RedirectResponse
     {
-        //
+        $this->jobRepository->update($job, $request->only('title', 'body'));
+
+        return redirect(route('index'))->with('success', 'Listing updated successfully!');
+    }
+
+    public function delete(Job $job): RedirectResponse
+    {
+        $this->jobRepository->delete($job);
+
+        return redirect(route('index'))->with('success', 'Listing DESTROYED BUHAHAHA!!!');
     }
 }

@@ -1,15 +1,16 @@
-@extends("layouts.default")
-@php
-    $name = "Senior Laravel Developer";
-@endphp
+@extends('layouts.default')
 
-@section("content")
+@section('content')
+    <script type="module">
+        handleErrors();
+    </script>
     <div class="mx-auto w-11/12 max-w-md py-6">
         <header class="text-center">
             <h2 class="mb-1 text-2xl font-bold uppercase">Edit Gig</h2>
-            <p class="mb-4">Edit: {{ $name }}</p>
+            <p class="mb-4">Edit: {{ $job->title }}</p>
         </header>
-        <form action="">
+        <form method="post" action="{{ route('jobs.update', $job) }}">
+            @csrf
             <div class="form-group">
                 <div class="form-field relative mb-2 pb-2">
                     <label for="company" class="form-label text-lg">Company Name</label>
@@ -20,9 +21,11 @@
                         placeholder="e.g., Acme Corp"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid company name.</span>
-                    </label>
+                    @error('company')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="title" class="form-label text-lg">Job Title</label>
@@ -30,12 +33,15 @@
                         id="title"
                         name="title"
                         type="text"
+                        value="{{ $job->title }}"
                         placeholder="e.g., Senior Laravel Developer"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid job title.</span>
-                    </label>
+                    @error('title')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="location" class="form-label text-lg">Job Location</label>
@@ -46,9 +52,11 @@
                         placeholder="e.g., Remote, Boston MA, etc"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid job location.</span>
-                    </label>
+                    @error('location')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="email" class="form-label text-lg">Contact Email</label>
@@ -59,9 +67,11 @@
                         placeholder="e.g., work@company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid email.</span>
-                    </label>
+                    @error('email')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="website" class="form-label text-lg">Website/Application URL</label>
@@ -72,9 +82,13 @@
                         placeholder="e.g., www.work.company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid company website.</span>
-                    </label>
+                    @error('website')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">
+                                {{ $message }}
+                            </span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="tags" class="form-label text-lg">Tags (Comma Separated)</label>
@@ -85,9 +99,11 @@
                         placeholder="e.g., Laravel, Backend, Postgres, etc."
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid tags.</span>
-                    </label>
+                    @error('tags')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="logo" class="form-label text-lg">Company Logo</label>
@@ -97,22 +113,28 @@
                         type="file"
                         class="input-file max-w-full border border-[#767676] bg-transparent file:bg-[#9750DD] file:text-white"
                     />
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please choose a file.</span>
-                    </label>
+                    @error('logo')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="form-field relative mb-2 pb-2">
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
                         id="description"
-                        name="description"
+                        name="body"
                         rows="10"
                         placeholder="Include tasks, requirements, salary, etc"
                         class="textarea textarea-solid max-w-full focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
-                    ></textarea>
-                    <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                        <span class="form-label-alt font-bold text-error">Please enter a valid description.</span>
-                    </label>
+                    >
+{{ $job->title }}</textarea
+                    >
+                    @error('body')
+                        <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
+                        </label>
+                    @enderror
                 </div>
                 <div class="btn-group btn-group-scrollable mt-2 flex">
                     <div class="form-control">
@@ -121,7 +143,12 @@
                         </button>
                     </div>
                     <div>
-                        <a href="/" class="btn btn-solid-secondary rounded-none rounded-r-lg text-base">Back</a>
+                        <a
+                            href="{{ url()->previous() }}"
+                            class="btn btn-solid-secondary rounded-none rounded-r-lg text-base"
+                        >
+                            Back
+                        </a>
                     </div>
                 </div>
             </div>

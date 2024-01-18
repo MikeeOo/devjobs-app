@@ -29,6 +29,14 @@
             @auth
                 <li>
                     <a
+                        href="{{ route('jobs.manage') }}"
+                        class="link navbar-item text-sm text-content1 link-underline-hover"
+                    >
+                        Manage jobs
+                    </a>
+                </li>
+                <li>
+                    <a
                         href="{{ route('jobs.create') }}"
                         class="link navbar-item text-sm text-content1 link-underline-hover"
                     >

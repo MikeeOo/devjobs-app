@@ -29,14 +29,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
     Route::post('/jobs/store', [JobController::class, 'store'])->name('jobs.store');
-
-    Route::get('/edit', function () {
-        return view('pages.edit');
-    });
-
-    Route::get('/manage', function () {
-        return view('pages.manage');
-    });
+    Route::get('/jobs/manage', [JobController::class, 'manage'])->name('jobs.manage');
+    Route::get('/jobs/{job}/edit', [JobController::class, 'edit'])->name('jobs.edit');
+    Route::post('/jobs/{job}', [JobController::class, 'update'])->name('jobs.update');
+    Route::get('/jobs/{job}/delete', [JobController::class, 'delete'])->name('jobs.delete');
 });
 
 Route::get('/jobs/{job}', [JobController::class, 'show'])->name('jobs.show');
