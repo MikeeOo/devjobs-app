@@ -9,18 +9,12 @@
         <ul class="navbar-end uppercase">
             @guest
                 <li>
-                    <a
-                        href="{{ route('login.view') }}"
-                        class="link navbar-item text-sm text-content1 link-underline-hover"
-                    >
+                    <a href="{{ route('login') }}" class="link navbar-item text-sm text-content1 link-underline-hover">
                         Log in
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="{{ route('register.view') }}"
-                        class="btn btn-outline-secondary navbar-item hover:!text-white"
-                    >
+                    <a href="{{ route('signup') }}" class="btn btn-outline-secondary navbar-item hover:!text-white">
                         Sign up
                     </a>
                 </li>

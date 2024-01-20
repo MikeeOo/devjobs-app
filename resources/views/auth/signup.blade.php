@@ -11,7 +11,7 @@
             <h2 class="text-2xl font-semibold mb-2">Sign Up</h2>
             <p class="text-sm">Create an account to post gigs</p>
         </div>
-        <form method="post" action="{{ route('register') }}">
+        <form method="post" action="{{ route('store') }}">
             @csrf
             <div class="form-group">
                 <div class="form-field relative pb-2">
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="form-control justify-center">
-                    <a href="{{ route('login.view') }}" class="link text-content3 text-sm link-underline-hover">
+                    <a href="{{ route('login') }}" class="link text-content3 text-sm link-underline-hover">
                         Already have an account? Log in.
                     </a>
                 </div>

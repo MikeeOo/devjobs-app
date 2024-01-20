@@ -11,30 +11,30 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function registerView(): View
+    public function signup(): View
     {
-        return view('auth.register');
+        return view('auth.signup');
     }
 
-    public function register(RegisterRequest $request): RedirectResponse
+    public function store(RegisterRequest $request): RedirectResponse
     {
         User::create($request->all());
 
-        return redirect(route('login.view'));
+        return redirect(route('login'));
     }
 
-    public function loginView(): View
+    public function login(): View
     {
         return view('auth.login');
     }
 
-    public function login(LoginRequest $request): RedirectResponse
+    public function attempt(LoginRequest $request): RedirectResponse
     {
         if (Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,
         ])) {
-            return redirect()->intended(route('home.view'));
+            return redirect()->intended(route('index'));
         }
 
         return back();
@@ -44,6 +44,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect(route('login.view'));
+        return redirect(route('login'));
     }
 }

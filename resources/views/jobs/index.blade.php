@@ -10,7 +10,7 @@
         <div>
             @guest
                 <a
-                    href="{{ route('register.view') }}"
+                    href="{{ route('signup') }}"
                     class="btn btn-outline-secondary navbar-item px-6 uppercase hover:!text-white"
                 >
                     Sign Up to List a Gig

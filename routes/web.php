@@ -18,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [JobController::class, 'index'])->name('index');
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/register', [AuthController::class, 'registerView'])->name('register.view');
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
-    Route::get('/login', [AuthController::class, 'loginView'])->name('login.view');
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+    Route::post('/store', [AuthController::class, 'store'])->name('store');
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/attempt', [AuthController::class, 'attempt'])->name('attempt');
 });
 
 Route::group(['middleware' => 'auth'], function () {
