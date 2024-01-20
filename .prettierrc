@@ -7,6 +7,7 @@
     ],
     "attributeGroups": [
         "^hidden$",
+        "^disabled",
         "^id$",
         "^name$",
         "^data-",

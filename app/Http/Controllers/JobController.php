@@ -20,7 +20,7 @@ class JobController extends Controller
 
     public function index(): View
     {
-        $jobs = $this->jobRepository->getAll(8);
+        $jobs = $this->jobRepository->getAll(8, 1);
 
         return view('jobs.index', compact('jobs'));
     }
@@ -44,7 +44,7 @@ class JobController extends Controller
 
     public function manage(): View
     {
-        $jobs = $this->jobRepository->getAll(8);
+        $jobs = $this->jobRepository->getAll(8, 1);
 
         return view('jobs.manage', compact('jobs'));
     }

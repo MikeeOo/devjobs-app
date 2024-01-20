@@ -9,12 +9,12 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class JobRepository implements IRepository
 {
-    public function getAll($paginate = null): Collection|LengthAwarePaginator
+    public function getAll($paginate = null, $onEachSide = null): Collection|LengthAwarePaginator
     {
-        if (! $paginate) {
+        if (! $paginate && ! $onEachSide) {
             return Job::all();
         } else {
-            return Job::paginate($paginate);
+            return Job::paginate($paginate)->onEachSide($onEachSide);
         }
     }
 

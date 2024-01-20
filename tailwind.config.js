@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 import rippleui from "rippleui";
+
 export default {
     content: ["./resources/**/*.blade.php", "./resources/**/*.js"],
     theme: {
@@ -11,4 +12,15 @@ export default {
         },
     },
     plugins: [rippleui, "prettier-plugin-tailwindcss"],
+    rippleui: {
+        themes: [
+            {
+                themeName: "dark",
+                colorScheme: "dark",
+                colors: {
+                    primary: "#9750DD",
+                },
+            },
+        ],
+    },
 };

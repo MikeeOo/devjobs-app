@@ -34,6 +34,6 @@
                 <x-job-card :job="$job" />
             @endforeach
         </div>
-        <div class="mt-6 p-4 mb-20">{{ $jobs->render() }}</div>
+        <div class="mt-6 p-4 mb-20">{{ $jobs->links('vendor.pagination.tailwind') }}</div>
     </div>
 @endsection
