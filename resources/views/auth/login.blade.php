@@ -11,6 +11,20 @@
             <h2 class="mb-2 text-2xl font-semibold">Sign In</h2>
             <p class="text-sm">Sign in to access your account</p>
         </div>
+        <form method="post" action="{{ route('attempt') }}" class="form-group">
+            @csrf
+            <label for="demo-email" hidden>demo-email</label>
+            <input id="demo-email" name="email" value="{{ 'a@a.com' }}" hidden />
+            <label for="demo-password" hidden>demo-password</label>
+            <input id="demo-password" name="password" value="{{ 'Asdfghjkl@123' }}" hidden />
+            <div class="form-label">Demo Account</div>
+            <button type="submit" class="btn btn-solid-warning btn-lg h-auto">
+                <div class="m-2 text-left text-sm">
+                    <div>email: a@a.com</div>
+                    <div>password: Asdfghjkl@123</div>
+                </div>
+            </button>
+        </form>
         <form method="post" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
