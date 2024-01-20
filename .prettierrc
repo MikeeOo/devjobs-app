@@ -6,14 +6,15 @@
         "prettier-plugin-organize-attributes"
     ],
     "attributeGroups": [
+        "^hidden$",
         "^id$",
         "^name$",
         "^data-",
         "^src$",
         "^for$",
-        "^type$",
         "^href$",
         "^value$",
+        "^type$",
         "^rows$",
         "^placeholder$",
         "^autocomplete$",

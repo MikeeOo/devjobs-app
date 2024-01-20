@@ -17,8 +17,8 @@
                     <input
                         id="company"
                         name="company"
-                        type="text"
                         value="{{ old('company') }}"
+                        type="text"
                         placeholder="e.g., Acme Corp"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -33,8 +33,8 @@
                     <input
                         id="title"
                         name="title"
-                        type="text"
                         value="{{ old('title') }}"
+                        type="text"
                         placeholder="e.g., Senior Laravel Developer"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -49,8 +49,8 @@
                     <input
                         id="location"
                         name="location"
-                        type="text"
                         value="{{ old('location') }}"
+                        type="text"
                         placeholder="e.g., Remote, Boston MA, etc"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -65,8 +65,8 @@
                     <input
                         id="email"
                         name="email"
-                        type="text"
                         value="{{ old('email') }}"
+                        type="email"
                         placeholder="e.g., work@company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -81,8 +81,8 @@
                     <input
                         id="website"
                         name="website"
-                        type="text"
                         value="{{ old('website') }}"
+                        type="text"
                         placeholder="e.g., www.work.company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -99,8 +99,8 @@
                     <input
                         id="tags"
                         name="tags"
-                        type="text"
                         value="{{ old('tags') }}"
+                        type="text"
                         placeholder="e.g., Laravel, Backend, Postgres, etc."
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -115,8 +115,8 @@
                     <input
                         id="logo"
                         name="logo"
-                        type="file"
                         value="{{ old('logo') }}"
+                        type="file"
                         class="input-file max-w-full bg-transparent file:bg-[#9750DD] border border-[#767676] file:text-white"
                     />
                     @error('logo')

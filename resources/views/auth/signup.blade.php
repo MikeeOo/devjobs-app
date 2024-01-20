@@ -19,8 +19,8 @@
                     <input
                         id="name"
                         name="name"
-                        type="text"
                         value="{{ old('name') }}"
+                        type="text"
                         placeholder="e.g., Jane"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -35,8 +35,8 @@
                     <input
                         id="surname"
                         name="surname"
-                        type="text"
                         value="{{ old('surname') }}"
+                        type="text"
                         placeholder="e.g., Doe"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -54,8 +54,8 @@
                     <input
                         id="login"
                         name="login"
-                        type="text"
                         value="{{ old('login') }}"
+                        type="text"
                         placeholder="e.g., CodeWarrior777"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -70,8 +70,8 @@
                     <input
                         id="email"
                         name="email"
-                        type="email"
                         value="{{ old('email') }}"
+                        type="email"
                         placeholder="Enter your email"
                         class="input input-solid input-rounded max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />

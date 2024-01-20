@@ -13,10 +13,10 @@
         </div>
         <form method="post" action="{{ route('attempt') }}" class="form-group">
             @csrf
-            <label for="demo-email" hidden>demo-email</label>
-            <input id="demo-email" name="email" value="{{ 'a@a.com' }}" hidden />
-            <label for="demo-password" hidden>demo-password</label>
-            <input id="demo-password" name="password" value="{{ 'Asdfghjkl@123' }}" hidden />
+            <label hidden for="demo-email">demo-email</label>
+            <input hidden id="demo-email" name="email" value="a@a.com" />
+            <label hidden for="demo-password">demo-password</label>
+            <input hidden id="demo-password" name="password" value="Asdfghjkl@123" />
             <div class="form-label">Demo Account</div>
             <button type="submit" class="btn btn-solid-warning btn-lg h-auto">
                 <div class="m-2 text-left text-sm">
@@ -33,8 +33,8 @@
                     <input
                         id="email"
                         name="email"
-                        type="email"
                         value="{{ old('email') }}"
+                        type="email"
                         placeholder="Enter your email"
                         class="input input-rounded input-solid max-w-full border border-content3 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
