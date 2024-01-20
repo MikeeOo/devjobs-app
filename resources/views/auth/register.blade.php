@@ -26,7 +26,7 @@
                     />
                     @error('name')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt text-error font-bold">{{ $errors->first('name') }}</span>
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -42,7 +42,7 @@
                     />
                     @error('surname')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt text-error font-bold">{{ $errors->first('surname') }}</span>
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -61,7 +61,7 @@
                     />
                     @error('login')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt text-error font-bold">{{ $errors->first('login') }}</span>
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -77,7 +77,7 @@
                     />
                     @error('email')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt text-error font-bold">{{ $errors->first('email') }}</span>
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -95,7 +95,7 @@
                     </div>
                     @error('password')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt text-error font-bold">{{ $errors->first('password') }}</span>
+                            <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -114,7 +114,7 @@
                     @error('password_repeat')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">
-                                {{ $errors->first('password_repeat') }}
+                                {{ $message }}
                             </span>
                         </label>
                     @enderror

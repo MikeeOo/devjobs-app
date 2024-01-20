@@ -26,7 +26,7 @@
                     />
                     @error('email')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt font-bold text-error">{{ $errors->first('email') }}</span>
+                            <span class="form-label-alt font-bold text-error">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
@@ -45,7 +45,7 @@
                     </div>
                     @error('password')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
-                            <span class="form-label-alt font-bold text-error">Invalid password.</span>
+                            <span class="form-label-alt font-bold text-error">{{ $message }}</span>
                         </label>
                     @enderror
                 </div>
