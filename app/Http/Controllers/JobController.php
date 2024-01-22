@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
+use App\Repositories\CompanyRepository;
 use App\Repositories\JobRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -13,9 +14,12 @@ class JobController extends Controller
 {
     private JobRepository $jobRepository;
 
+    private CompanyRepository $companyRepository;
+
     public function __construct()
     {
         $this->jobRepository = new JobRepository();
+        $this->companyRepository = new CompanyRepository();
     }
 
     public function index(): View
@@ -32,7 +36,9 @@ class JobController extends Controller
 
     public function store(CreateJobRequest $request): RedirectResponse
     {
-        $this->jobRepository->create($request->all());
+        $company = $this->companyRepository->create($request->all());
+
+        $this->jobRepository->create($request->all(), $company);
 
         return redirect(route('index'))->with('success', 'Listing created successfully!');
     }

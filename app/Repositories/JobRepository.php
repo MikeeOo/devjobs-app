@@ -23,9 +23,9 @@ class JobRepository implements IRepository
         return Job::find($id);
     }
 
-    public function create($data)
+    public function create($data, $company = null)
     {
-        return Job::create($data);
+        return Job::create([...$data, 'company_id' => $company->id]);
     }
 
     public function update($job, $data)
