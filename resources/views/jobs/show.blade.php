@@ -5,7 +5,7 @@
         <div class="flex flex-col items-center justify-center text-center">
             <img src="{{ url('storage/images/digital-logo.png') }}" alt="" class="w-36 mb-6" />
             <h3 class="text-2xl mb-2">{{ $job->title }}</h3>
-            <div class="text-xl font-bold mb-4">DigitalSprint Innovations</div>
+            <div class="text-xl font-bold mb-4">{{ $job->company->name }}</div>
             <ul class="flex">
                 <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">Node.js</a></li>
                 <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">React</a></li>
@@ -27,13 +27,16 @@
                         {{ $job->body }}
                     </p>
                     <a
-                        href=""
+                        href="{{ $job->company->email }}"
                         class="btn btn-rounded btn-outline-secondary text-content1 btn-block mt-6 btn-lg hover:!text-white"
                     >
                         <i class="fa-solid fa-envelope pr-2"></i>
                         Contact Employer
                     </a>
-                    <a href="" class="btn btn-rounded btn-solid-secondary btn-block mt-6 btn-lg">
+                    <a
+                        href="{{ $job->company->website }}"
+                        class="btn btn-rounded btn-solid-secondary btn-block mt-6 btn-lg"
+                    >
                         <i class="fa-solid fa-globe pr-2"></i>
                         Visit Website
                     </a>

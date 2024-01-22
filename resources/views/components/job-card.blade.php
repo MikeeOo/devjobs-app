@@ -13,7 +13,7 @@
                 <h3 class="text-2xl link-underline-hover hover:text-content2">
                     <a href="{{ route('jobs.show', $job->id) }}">{{ $job->title }}</a>
                 </h3>
-                <div class="text-xl font-bold mb-4">DigitalSprint Innovations</div>
+                <div class="text-xl font-bold mb-4">{{ $job->company->name }}</div>
                 <ul class="flex">
                     <li class="btn btn-solid-secondary btn-rounded px-3 mr-2 btn-xs">
                         <a href="#">Node.js</a>
