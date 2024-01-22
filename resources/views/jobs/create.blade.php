@@ -13,16 +13,16 @@
             @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
-                    <label for="company" class="form-label text-lg">Company Name</label>
+                    <label for="name" class="form-label text-lg">Company Name</label>
                     <input
-                        id="company"
-                        name="company"
-                        value="{{ old('company') }}"
+                        id="name"
+                        name="name"
+                        value="{{ old('name') }}"
                         type="text"
                         placeholder="e.g., Acme Corp"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    @error('company')
+                    @error('name')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
@@ -82,7 +82,7 @@
                         id="website"
                         name="website"
                         value="{{ old('website') }}"
-                        type="text"
+                        type="url"
                         placeholder="e.g., www.work.company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
