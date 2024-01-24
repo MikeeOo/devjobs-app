@@ -3,6 +3,8 @@
 namespace App\Repositories;
 
 use App\Interfaces\IRepository;
+use App\Models\Image;
+use Illuminate\Support\Str;
 
 class ImageRepository implements IRepository
 {
@@ -16,9 +18,12 @@ class ImageRepository implements IRepository
         // TODO: Implement getById() method.
     }
 
-    public function create($data)
+    public function create($data, $fileName = null, $company = null, $type = null)
     {
-        //        Image::create($data);
+        $uniqueFileName = Str::uuid().'_'.time().'_'.$fileName;
+        $data->storeAs('images', $uniqueFileName, 'public');
+
+        return Image::create(['url' => $uniqueFileName, 'type' => $type, 'parent_id' => $company->id]);
     }
 
     public function update($job, $data)

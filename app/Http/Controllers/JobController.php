@@ -6,6 +6,7 @@ use App\Http\Requests\CreateJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
 use App\Repositories\CompanyRepository;
+use App\Repositories\ImageRepository;
 use App\Repositories\JobRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -16,10 +17,13 @@ class JobController extends Controller
 
     private CompanyRepository $companyRepository;
 
+    protected ImageRepository $imageRepository;
+
     public function __construct()
     {
         $this->jobRepository = new JobRepository();
         $this->companyRepository = new CompanyRepository();
+        $this->imageRepository = new ImageRepository();
     }
 
     public function index(): View
@@ -37,6 +41,8 @@ class JobController extends Controller
     public function store(CreateJobRequest $request): RedirectResponse
     {
         $company = $this->companyRepository->create($request->all());
+
+        $this->imageRepository->create($request->file('url'), $request->url->getClientOriginalName(), $company, 'logo');
 
         $this->jobRepository->create($request->all(), $company);
 
