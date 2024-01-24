@@ -4,7 +4,7 @@
 <div class="bg-backgroundSecondary rounded-lg mb-4 lg:mb-0">
     <div class="flex">
         <img
-            src="{{ url('storage/images/digital-logo.png') }}"
+            src="{{ url('storage/images/' . $job->logo->url) }}"
             alt=""
             class="hidden md:block rounded-l-lg w-48 h-48"
         />
