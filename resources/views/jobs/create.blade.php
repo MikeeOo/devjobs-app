@@ -9,7 +9,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
-        <form method="post" action="{{ route('jobs.store') }}">
+        <form method="post" action="{{ route('jobs.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
@@ -114,8 +114,8 @@
                     <label for="logo" class="form-label text-lg">Company Logo</label>
                     <input
                         id="logo"
-                        name="logo"
-                        value="{{ old('logo') }}"
+                        name="url"
+                        value="{{ old('url') }}"
                         type="file"
                         class="input-file max-w-full bg-transparent file:bg-[#9750DD] border border-[#767676] file:text-white"
                     />
