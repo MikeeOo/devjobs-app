@@ -115,11 +115,10 @@
                     <input
                         id="logo"
                         name="url"
-                        value="{{ old('url') }}"
                         type="file"
                         class="input-file max-w-full bg-transparent file:bg-[#9750DD] border border-[#767676] file:text-white"
                     />
-                    @error('logo')
+                    @error('url')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
