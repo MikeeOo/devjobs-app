@@ -3,29 +3,29 @@
 namespace App\Repositories;
 
 use App\Interfaces\IRepository;
-use App\Models\Job;
+use App\Models\Listing;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class JobRepository implements IRepository
+class ListingRepository implements IRepository
 {
     public function getAll($paginate = null, $onEachSide = null): Collection|LengthAwarePaginator
     {
         if (! $paginate && ! $onEachSide) {
-            return Job::all();
+            return Listing::all();
         } else {
-            return Job::paginate($paginate)->onEachSide($onEachSide);
+            return Listing::paginate($paginate)->onEachSide($onEachSide);
         }
     }
 
     public function getById($id)
     {
-        return Job::find($id);
+        return Listing::find($id);
     }
 
     public function create($data, $company = null)
     {
-        return Job::create([...$data, 'company_id' => $company->id]);
+        return Listing::create([...$data, 'company_id' => $company->id]);
     }
 
     public function update($job, $data)
