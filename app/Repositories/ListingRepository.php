@@ -28,13 +28,13 @@ class ListingRepository implements IRepository
         return Listing::create([...$data, 'company_id' => $company->id]);
     }
 
-    public function update($job, $data)
+    public function update($listing, $data)
     {
-        return $job->update($data);
+        return $listing->update($data);
     }
 
-    public function delete($job)
+    public function delete($listing)
     {
-        return $job->delete($job);
+        return $listing->delete($listing);
     }
 }

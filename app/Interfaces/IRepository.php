@@ -10,7 +10,7 @@ interface IRepository
 
     public function create($data);
 
-    public function update($job, $data);
+    public function update($listing, $data);
 
-    public function delete($job);
+    public function delete($listing);
 }
