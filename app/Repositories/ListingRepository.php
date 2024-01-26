@@ -23,9 +23,9 @@ class ListingRepository implements IRepository
         return Listing::find($id);
     }
 
-    public function create($data, $company = null)
+    public function create($data)
     {
-        return Listing::create([...$data, 'company_id' => $company->id]);
+        return Listing::create($data);
     }
 
     public function update($listing, $data)
