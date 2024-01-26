@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateJobRequest extends FormRequest
+class CreateListingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,16 +22,14 @@ class CreateJobRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:2|unique:companies|max:255',
-
+            'company' => 'required|min:2|max:255',
             'title' => 'required|min:2|max:255',
-            //            'location' => 'required|min:2|max:255',
-
+            'location' => 'required|min:2|max:255',
             'email' => 'required|email|unique:companies|max:255',
             'website' => 'required|url:http,https|unique:companies|max:255',
-            'url' => 'required|image|mimes:png,gif,jpeg,jpg',
-            //            'logo' => 'required|min:2|max:255',
-            'body' => 'required|min:2',
+            'tags' => 'required|min:2|max:255',
+            'logo' => 'required|image|mimes:png,gif,jpeg,jpg',
+            'description' => 'required|min:2',
         ];
     }
 }
