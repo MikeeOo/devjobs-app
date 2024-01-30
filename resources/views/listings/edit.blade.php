@@ -7,9 +7,9 @@
     <div class="mx-auto w-11/12 max-w-md py-6">
         <header class="text-center">
             <h2 class="mb-1 text-2xl font-bold uppercase">Edit Gig</h2>
-            <p class="mb-4">Edit: {{ $job->title }}</p>
+            <p class="mb-4">Edit: {{ $listing->title }}</p>
         </header>
-        <form method="post" action="{{ route('jobs.update', $job) }}">
+        <form method="post" action="{{ route('jobs.update', $listing) }}">
             @csrf
             <div class="form-group">
                 <div class="form-field relative mb-2 pb-2">
@@ -32,7 +32,7 @@
                     <input
                         id="title"
                         name="title"
-                        value="{{ $job->title }}"
+                        value="{{ $listing->title }}"
                         type="text"
                         placeholder="e.g., Senior Laravel Developer"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
@@ -128,7 +128,7 @@
                         placeholder="Include tasks, requirements, salary, etc"
                         class="textarea textarea-solid max-w-full focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     >
-{{ $job->title }}</textarea
+{{ $listing->description }}</textarea
                     >
                     @error('body')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
