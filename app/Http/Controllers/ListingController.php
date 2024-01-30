@@ -22,7 +22,7 @@ class ListingController extends Controller
     {
         $listings = $this->listingRepository->getAll(8, 1);
 
-        return view('jobs.index', compact('listings'));
+        return view('listings.index', compact('listings'));
     }
 
     public function create(): View
