@@ -19,7 +19,7 @@ Route::get('/', [ListingController::class, 'index'])->name('index');
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
-    Route::post('/store', [AuthController::class, 'store'])->name('store');
+    Route::post('/register', [AuthController::class, 'register'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/attempt', [AuthController::class, 'attempt'])->name('attempt');
 });

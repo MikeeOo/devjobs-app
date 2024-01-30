@@ -16,7 +16,7 @@ class AuthController extends Controller
         return view('auth.signup');
     }
 
-    public function store(RegisterRequest $request): RedirectResponse
+    public function register(RegisterRequest $request): RedirectResponse
     {
         User::create($request->all());
 

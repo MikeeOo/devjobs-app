@@ -11,7 +11,7 @@
             <h2 class="text-2xl font-semibold mb-2">Sign Up</h2>
             <p class="text-sm">Create an account to post gigs</p>
         </div>
-        <form method="post" action="{{ route('store') }}">
+        <form method="post" action="{{ route('register') }}">
             @csrf
             <div class="form-group">
                 <div class="form-field relative pb-2">
