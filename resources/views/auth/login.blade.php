@@ -19,10 +19,10 @@
             <input hidden id="demo-password" name="password" value="Asdfghjkl@123" />
             <div class="form-label">Demo Account</div>
             <button type="submit" class="btn btn-solid-warning btn-lg h-auto">
-                <div class="m-2 text-left text-sm">
-                    <div>email: a@a.com</div>
-                    <div>password: Asdfghjkl@123</div>
-                </div>
+                <span class="m-2 text-left text-sm flex flex-col">
+                    <span>email: a@a.com</span>
+                    <span>password: Asdfghjkl@123</span>
+                </span>
             </button>
         </form>
         <form method="post" action="{{ route('attempt') }}">
