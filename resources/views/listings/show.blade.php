@@ -4,8 +4,8 @@
     <div class="w-11/12 max-w-screen-sm mx-auto py-6">
         <div class="flex flex-col items-center justify-center text-center">
             <img src="{{ url('storage/images/digital-logo.png') }}" alt="" class="w-36 mb-6" />
-            <h3 class="text-2xl mb-2">{{ $job->title }}</h3>
-            <div class="text-xl font-bold mb-4">{{ $job->company->name }}</div>
+            <h3 class="text-2xl mb-2">{{ $listing->title }}</h3>
+            <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
             <ul class="flex">
                 <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">Node.js</a></li>
                 <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">React</a></li>
@@ -21,20 +21,17 @@
                 <h3 class="text-3xl font-bold mb-4">Job Description</h3>
                 <div class="text-lg space-y-6 px-6">
                     <p class="font-main">
-                        {{ $job->body }}
-                    </p>
-                    <p class="font-main">
-                        {{ $job->body }}
+                        {{ $listing->description }}
                     </p>
                     <a
-                        href="{{ $job->company->email }}"
+                        href="{{ $listing->email }}"
                         class="btn btn-rounded btn-outline-secondary text-content1 btn-block mt-6 btn-lg hover:!text-white"
                     >
                         <i class="fa-solid fa-envelope pr-2"></i>
                         Contact Employer
                     </a>
                     <a
-                        href="{{ $job->company->website }}"
+                        href="{{ $listing->website }}"
                         class="btn btn-rounded btn-solid-secondary btn-block mt-6 btn-lg"
                     >
                         <i class="fa-solid fa-globe pr-2"></i>
