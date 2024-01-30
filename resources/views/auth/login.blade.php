@@ -25,7 +25,7 @@
                 </div>
             </button>
         </form>
-        <form method="post" action="{{ route('login') }}">
+        <form method="post" action="{{ route('attempt') }}">
             @csrf
             <div class="form-group">
                 <div class="form-field relative pb-2">
