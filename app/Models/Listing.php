@@ -11,13 +11,13 @@ class Listing extends Model
 
     protected $fillable = [
         'user_id',
-        'title',
-        'logo',
-        'tags',
         'company',
+        'title',
         'location',
         'email',
         'website',
+        'tags',
+        'logo',
         'description',
     ];
 }
