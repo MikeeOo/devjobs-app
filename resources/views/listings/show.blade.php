@@ -24,7 +24,7 @@
                         {{ $listing->description }}
                     </p>
                     <a
-                        href="{{ $listing->email }}"
+                        href="mailto:{{ $listing->email }}"
                         class="btn btn-rounded btn-outline-secondary text-content1 btn-block mt-6 btn-lg hover:!text-white"
                     >
                         <i class="fa-solid fa-envelope pr-2"></i>
