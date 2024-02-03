@@ -14,7 +14,7 @@
             </ul>
             <div class="text-lg mt-4">
                 <i class="fa-solid fa-location-dot text-content3 mr-2"></i>
-                Chicago, IL
+                {{ $listing->location }}
             </div>
             <div class="divider w-full mt-2"></div>
             <div>
