@@ -4,9 +4,10 @@
 <div class="bg-backgroundSecondary rounded-lg mb-4 lg:mb-0">
     <div class="flex">
         <img
-            src="{{ url('storage/images/' . $listing->logo) }}"
+            src="{{ $listing->logo }}"
             alt=""
             class="hidden md:block rounded-l-lg w-48 h-48"
+            {{-- src="{{ url('storage/images/' . $listing->logo) }}" --}}
         />
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
