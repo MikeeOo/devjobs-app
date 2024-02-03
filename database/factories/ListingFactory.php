@@ -14,6 +14,17 @@ class ListingFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    private function csv(): string
+    {
+        $str = '';
+
+        for ($i = 0; $i < 4; $i++) {
+            $str = $str.fake()->word().',';
+        }
+
+        return substr($str, 0, -1);
+    }
+
     public function definition(): array
     {
         return [
@@ -23,7 +34,7 @@ class ListingFactory extends Factory
             'location' => fake()->city(),
             'email' => fake()->companyEmail(),
             'website' => fake()->url(),
-            'tags' => 'laravel, api, backend',
+            'tags' => $this->csv(),
             'logo' => fake()->imageUrl(500, 500, 'cities'),
             'description' => fake()->paragraphs(4, true),
         ];
