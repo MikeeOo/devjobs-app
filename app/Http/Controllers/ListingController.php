@@ -39,7 +39,7 @@ class ListingController extends Controller
 
     public function show(Listing $listing): View
     {
-        return view('jobs.show', compact('listing'));
+        return view('listings.show', compact('listing'));
     }
 
     public function manage(): View

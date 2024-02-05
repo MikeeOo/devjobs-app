@@ -35,4 +35,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/jobs/{job}/delete', [ListingController::class, 'delete'])->name('jobs.delete');
 });
 
-Route::get('/jobs/{job}', [ListingController::class, 'show'])->name('jobs.show');
+Route::get('/jobs/{listing}', [ListingController::class, 'show'])->name('listings.show');
