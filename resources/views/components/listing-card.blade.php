@@ -15,20 +15,7 @@
                     <a href="{{ route('listings.show', $listing->id) }}">{{ $listing->title }}</a>
                 </h3>
                 <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
-                <ul class="flex">
-                    <li class="btn btn-solid-secondary btn-rounded px-3 mr-2 btn-xs">
-                        <a href="#">Node.js</a>
-                    </li>
-                    <li class="btn btn-solid-secondary btn-rounded px-3 mr-2 btn-xs">
-                        <a href="#">React</a>
-                    </li>
-                    <li class="btn btn-solid-secondary btn-rounded px-3 mr-2 btn-xs">
-                        <a href="#">API</a>
-                    </li>
-                    <li class="btn btn-solid-secondary btn-rounded px-3 mr-2 btn-xs">
-                        <a href="#">Docker</a>
-                    </li>
-                </ul>
+                <x-listing-tags :tagsCsv="$listing->tags" />
                 <div class="text-lg mt-4">
                     <i class="fa-solid fa-location-dot text-content3 mr-2"></i>
                     {{ $listing->location }}
