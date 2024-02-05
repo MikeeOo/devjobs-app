@@ -9,13 +9,14 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class ListingRepository implements IRepository
 {
-    public function getAll($paginate = null, $onEachSide = null): Collection|LengthAwarePaginator
+    public function getAll(): Collection
     {
-        if (! $paginate && ! $onEachSide) {
-            return Listing::all();
-        } else {
-            return Listing::paginate($paginate)->onEachSide($onEachSide);
-        }
+        return Listing::all();
+    }
+
+    public function getScopedAndPaginated($scopeParams, $perPage, $onEachSide): LengthAwarePaginator
+    {
+        return Listing::latest()->filter($scopeParams)->paginate($perPage)->onEachSide($onEachSide);
     }
 
     public function getById($id)

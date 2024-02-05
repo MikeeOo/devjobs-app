@@ -6,6 +6,8 @@ interface IRepository
 {
     public function getAll();
 
+    public function getScopedAndPaginated($scopeParams, $perPage, $onEachSide);
+
     public function getById($id);
 
     public function create($data);

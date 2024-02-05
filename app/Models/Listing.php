@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder;
 
 class Listing extends Model
 {
@@ -20,4 +21,11 @@ class Listing extends Model
         'logo',
         'description',
     ];
+
+    public function scopeFilter(Builder $query, array $scopeParams): void
+    {
+        if (isset($scopeParams['tag'])) {
+            $query->where('tags', 'like', '%'.request('tag').'%');
+        }
+    }
 }
