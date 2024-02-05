@@ -7,12 +7,7 @@
             <img src="{{ $listing->logo }}" alt="" class="w-36 mb-6" />
             <h3 class="text-2xl mb-2">{{ $listing->title }}</h3>
             <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
-            <ul class="flex">
-                <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">Node.js</a></li>
-                <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">React</a></li>
-                <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">API</a></li>
-                <li class="btn btn-solid-secondary btn-rounded mr-2 btn-sm"><a href="#">Docker</a></li>
-            </ul>
+            <x-listing-tags :tagsCsv="$listing->tags" />
             <div class="text-lg mt-4">
                 <i class="fa-solid fa-location-dot text-content3 mr-2"></i>
                 {{ $listing->location }}
