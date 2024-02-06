@@ -27,5 +27,10 @@ class Listing extends Model
         if (isset($scopeParams['tag'])) {
             $query->where('tags', 'like', '%'.request('tag').'%');
         }
+        if (isset($scopeParams['search'])) {
+            $query->where('title', 'like', '%'.request('search').'%')
+                ->orWhere('tags', 'like', '%'.request('search').'%')
+                ->orWhere('description', 'like', '%'.request('search').'%');
+        }
     }
 }
