@@ -1,9 +1,9 @@
-<form action="" class="w-11/12 mx-auto">
+<form method="get" action="/" class="w-11/12 mx-auto">
     <div class="relative max-w-screen-md m-auto">
         <div class="absolute top-4 left-5 text-content3">
             <i class="fa fa-search"></i>
         </div>
-        <label for="search" hidden>Devjobs search</label>
+        <label hidden for="search">Devjobs search</label>
         <input
             id="search"
             name="search"
