@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateListingRequest;
-use App\Http\Requests\UpdateListingRequest;
+use App\Http\Requests\ListingRequest;
 use App\Models\Listing;
 use App\Repositories\ListingRepository;
 use Illuminate\Contracts\View\View;
@@ -30,7 +29,7 @@ class ListingController extends Controller
         return view('jobs.create');
     }
 
-    public function store(CreateListingRequest $request): RedirectResponse
+    public function store(ListingRequest $request): RedirectResponse
     {
         $this->listingRepository->create($request->all());
 
@@ -54,7 +53,7 @@ class ListingController extends Controller
         return view('jobs.edit', compact('listing'));
     }
 
-    public function update(UpdateListingRequest $request, Listing $listing): RedirectResponse
+    public function update(ListingRequest $request, Listing $listing): RedirectResponse
     {
         $this->listingRepository->update($listing, $request->all());
 
