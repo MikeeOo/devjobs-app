@@ -21,7 +21,7 @@ export const handleFlashMessage = () => {
         }
     }, 1000);
 
-    closeBtn.addEventListener(`click`, (e) => {
+    closeBtn.addEventListener(`click`, () => {
         flash.setAttribute("hidden", "true");
         count = 0;
     });
