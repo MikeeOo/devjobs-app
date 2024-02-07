@@ -27,7 +27,7 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/jobs/create', [ListingController::class, 'create'])->name('jobs.create');
+    Route::get('/jobs/create', [ListingController::class, 'create'])->name('listings.create');
     Route::post('/jobs/store', [ListingController::class, 'store'])->name('jobs.store');
     Route::get('/jobs/manage', [ListingController::class, 'manage'])->name('jobs.manage');
     Route::get('/jobs/{job}/edit', [ListingController::class, 'edit'])->name('jobs.edit');
