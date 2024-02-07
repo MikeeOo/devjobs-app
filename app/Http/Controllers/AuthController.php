@@ -20,7 +20,7 @@ class AuthController extends Controller
     {
         User::create($request->all());
 
-        return redirect(route('login'));
+        return redirect(route('login'))->with('login-success', 'You\'re in! Login to begin.');
     }
 
     public function login(): View
@@ -34,7 +34,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ])) {
-            return redirect()->intended(route('index'));
+            return redirect()->intended(route('index'))->with('success', 'Login successful!');
         }
 
         return back();
@@ -44,6 +44,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect(route('login'));
+        return redirect(route('index'))->with('success', 'You have been logged out!');
     }
 }
