@@ -8,8 +8,12 @@
         class="mx-auto flex w-11/12 max-w-md flex-col gap-6 rounded-lg bg-backgroundSecondary px-4 py-8 sm:mt-36 sm:w-10/12 sm:px-8 sm:py-8"
     >
         <div class="text-center">
-            <h2 class="mb-2 text-2xl font-semibold">Sign In</h2>
-            <p class="text-sm">Sign in to access your account</p>
+            @if (session()->has('login-success'))
+                <p class="text-xl bg-[#164E2B] rounded-md py-2">{{ session('login-success') }}</p>
+            @else
+                <h2 class="mb-2 text-2xl font-semibold">Sign In</h2>
+                <p class="text-sm">Sign in to access your account</p>
+            @endif
         </div>
         <form method="post" action="{{ route('attempt') }}" class="form-group">
             @csrf
