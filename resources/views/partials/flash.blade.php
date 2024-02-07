@@ -4,7 +4,7 @@
     </script>
     <div id="flash" class="bg-green-300 max-w-screen-xl m-auto relative">
         <div
-            class="alert alert-success max-w-sm backdrop-blur-sm bg-green-600/40 z-50 absolute right-0 mt-[-40px] mr-2"
+            class="alert alert-success max-w-sm backdrop-blur-sm bg-green-600/40 z-50 absolute right-[50%] mt-[-60px] translate-x-[50%] rounded-t-none border-green-800 border-t-2"
         >
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
