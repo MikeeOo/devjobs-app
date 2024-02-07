@@ -7,6 +7,7 @@ export const handleErrors = () =>
 
 export const handleFlashMessage = () => {
     const flash = document.getElementById("flash");
+    const closeBtn = document.getElementById("flash-close");
     const counter = document.getElementById("counter");
     let count = +counter.innerText.split("")[1];
 
@@ -19,4 +20,9 @@ export const handleFlashMessage = () => {
             counter.innerText = `0${count}...`;
         }
     }, 1000);
+
+    closeBtn.addEventListener(`click`, (e) => {
+        flash.setAttribute("hidden", "true");
+        count = 0;
+    });
 };
