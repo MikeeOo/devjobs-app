@@ -25,10 +25,10 @@ class ListingRequest extends FormRequest
             'company' => 'required|min:2|max:255',
             'title' => 'required|min:2|max:255',
             'location' => 'required|min:2|max:255',
-            'email' => 'required|email|unique:companies|max:255',
-            'website' => 'required|url:http,https|unique:companies|max:255',
+            'email' => 'required|email|max:255',
+            'website' => 'required|url:http,https|max:255',
             'tags' => 'required|min:2|max:255',
-            'logo' => 'required|image|mimes:png,gif,jpeg,jpg',
+            //            'logo' => 'required|image|mimes:png,gif,jpeg,jpg',
             'description' => 'required|min:2',
         ];
     }
