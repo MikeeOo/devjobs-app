@@ -26,7 +26,7 @@ class ListingController extends Controller
 
     public function create(): View
     {
-        return view('jobs.create');
+        return view('listings.create');
     }
 
     public function store(ListingRequest $request): RedirectResponse
