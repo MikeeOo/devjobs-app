@@ -19,7 +19,7 @@
 
             @auth
                 <a
-                    href="{{ route('jobs.create') }}"
+                    href="{{ route('listings.create') }}"
                     class="btn btn-outline-secondary navbar-item px-6 uppercase hover:!text-white"
                 >
                     Create a Gig

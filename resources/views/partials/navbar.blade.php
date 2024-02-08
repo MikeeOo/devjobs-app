@@ -31,7 +31,7 @@
                 </li>
                 <li>
                     <a
-                        href="{{ route('jobs.create') }}"
+                        href="{{ route('listings.create') }}"
                         class="link navbar-item text-sm text-content1 link-underline-hover"
                     >
                         Create a job

@@ -14,7 +14,7 @@
         </div>
 
         <div class="navbar-end uppercase">
-            <a href="{{ route('jobs.create') }}" class="btn btn-outline-secondary navbar-item hover:!text-white">
+            <a href="{{ route('listings.create') }}" class="btn btn-outline-secondary navbar-item hover:!text-white">
                 Post Job
             </a>
         </div>
