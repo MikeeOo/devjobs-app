@@ -13,16 +13,16 @@
             @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
-                    <label for="name" class="form-label text-lg">Company Name</label>
+                    <label for="company" class="form-label text-lg">Company Name</label>
                     <input
-                        id="name"
-                        name="name"
-                        value="{{ old('name') }}"
+                        id="company"
+                        name="company"
+                        value="{{ old('company') }}"
                         type="text"
                         placeholder="e.g., Acme Corp"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
-                    @error('name')
+                    @error('company')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
@@ -83,7 +83,7 @@
                         name="website"
                         value="{{ old('website') }}"
                         type="url"
-                        placeholder="e.g., www.work.company.com"
+                        placeholder="e.g., https://www.company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
                     @error('website')
@@ -114,11 +114,11 @@
                     <label for="logo" class="form-label text-lg">Company Logo</label>
                     <input
                         id="logo"
-                        name="url"
+                        name="logo"
                         type="file"
                         class="input-file max-w-full bg-transparent file:bg-[#9750DD] border border-[#767676] file:text-white"
                     />
-                    @error('url')
+                    @error('logo')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
@@ -128,14 +128,14 @@
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
                         id="description"
-                        name="body"
+                        name="description"
                         rows="10"
                         placeholder="Include tasks, requirements, salary, etc"
                         class="textarea textarea-solid max-w-full focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     >
-{{ old('body') }}</textarea
+{{ old('description') }}</textarea
                     >
-                    @error('body')
+                    @error('description')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
