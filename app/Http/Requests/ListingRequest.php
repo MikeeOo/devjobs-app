@@ -28,7 +28,7 @@ class ListingRequest extends FormRequest
             'email' => 'required|email|max:255',
             'website' => 'required|url:http,https|max:255',
             'tags' => 'required|min:2|max:255',
-            //            'logo' => 'required|image|mimes:png,gif,jpeg,jpg',
+            'logo' => 'image|mimes:png,gif,jpeg,jpg',
             'description' => 'required|min:2',
         ];
     }
