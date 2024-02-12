@@ -96,7 +96,7 @@
                         id="tags"
                         name="tags"
                         type="text"
-                        placeholder="e.g., Laravel, Backend, Postgres, etc."
+                        placeholder="e.g. laravel,backend,postgres etc."
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
                     @error('tags')
