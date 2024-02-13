@@ -3,8 +3,14 @@
 @section('content')
     <div class="w-11/12 max-w-screen-sm mx-auto py-6">
         <div class="flex flex-col items-center justify-center text-center">
-            {{-- <img src="{{ url('storage/images/digital-logo.png') }}" alt="" class="w-36 mb-6" /> --}}
-            <img src="{{ $listing->logo }}" alt="" class="w-36 mb-6" />
+            @if ($listing->logo)
+                <img
+                    src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : url('storage/images/' . $listing->logo) }}"
+                    alt=""
+                    class="w-36 mb-6"
+                />
+            @endif
+
             <h3 class="text-2xl mb-2">{{ $listing->title }}</h3>
             <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
             <x-listing-tags :tagsCsv="$listing->tags" />

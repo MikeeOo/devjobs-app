@@ -3,12 +3,14 @@
 ])
 <div class="bg-backgroundSecondary rounded-lg mb-4 lg:mb-0">
     <div class="flex">
-        <img
-            src="{{ $listing->logo }}"
-            alt=""
-            class="hidden md:block rounded-l-lg w-48 h-48"
-            {{-- src="{{ url('storage/images/' . $listing->logo) }}" --}}
-        />
+        @if ($listing->logo)
+            <img
+                src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : url('storage/images/' . $listing->logo) }}"
+                alt=""
+                class="hidden md:block rounded-l-lg w-48 h-48"
+            />
+        @endif
+
         <div class="flex justify-center items-center md:ml-6 md:py-0 pr-3 ml-8 py-4">
             <div>
                 <h3 class="text-2xl link-underline-hover hover:text-content2">
