@@ -16,7 +16,7 @@
                     @foreach ($listings as $listing)
                         <tr>
                             <td class="text-lg">
-                                <a href="{{ route('jobs.show', $listing) }}" class="link link-underline-hover">
+                                <a href="{{ route('listings.show', $listing) }}" class="link link-underline-hover">
                                     {{ $listing->title }}
                                 </a>
                             </td>
