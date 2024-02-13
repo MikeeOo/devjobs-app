@@ -23,7 +23,7 @@
             @auth
                 <li>
                     <a
-                        href="{{ route('jobs.manage') }}"
+                        href="{{ route('listings.manage') }}"
                         class="link navbar-item text-sm text-content1 link-underline-hover"
                     >
                         Manage jobs
