@@ -50,7 +50,7 @@ class ListingController extends Controller
 
     public function edit(Listing $listing): View
     {
-        return view('jobs.edit', compact('listing'));
+        return view('listings.edit', compact('listing'));
     }
 
     public function update(ListingRequest $request, Listing $listing): RedirectResponse
