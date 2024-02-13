@@ -36,7 +36,7 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="mt-6 p-4 mb-20">{{ $listings->render() }}</div>
+            <div class="mt-6 p-4 mb-20">{{ $listings->links('vendor.pagination.tailwind') }}</div>
         </div>
     </div>
 @endsection
