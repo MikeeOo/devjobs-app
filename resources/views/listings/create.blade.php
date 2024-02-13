@@ -9,7 +9,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
-        <form method="post" action="{{ route('jobs.store') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('listings.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
