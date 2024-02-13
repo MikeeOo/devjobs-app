@@ -43,9 +43,9 @@ class ListingController extends Controller
 
     public function manage(): View
     {
-        $listings = $this->listingRepository->getAll(8, 1);
+        $listings = $this->listingRepository->getScopedAndPaginated(request(['tag', 'search']), 8, 1);
 
-        return view('jobs.manage', compact('listings'));
+        return view('listings.manage', compact('listings'));
     }
 
     public function edit(Listing $listing): View
