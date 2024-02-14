@@ -21,7 +21,7 @@
                                 </a>
                             </td>
                             <td class="text-lg">
-                                <a href="{{ route('jobs.edit', $listing) }}" class="btn btn-solid-primary">
+                                <a href="{{ route('listings.edit', $listing) }}" class="btn btn-solid-primary">
                                     <i class="fa-solid fa-pen-to-square pr-1"></i>
                                     Edit
                                 </a>

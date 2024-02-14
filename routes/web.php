@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/jobs/create', [ListingController::class, 'create'])->name('listings.create');
     Route::post('/jobs/store', [ListingController::class, 'store'])->name('listings.store');
     Route::get('/jobs/manage', [ListingController::class, 'manage'])->name('listings.manage');
-    Route::get('/jobs/{listing}/edit', [ListingController::class, 'edit'])->name('jobs.edit');
+    Route::get('/jobs/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
     Route::post('/jobs/{job}', [ListingController::class, 'update'])->name('jobs.update');
     Route::get('/jobs/{job}/delete', [ListingController::class, 'delete'])->name('jobs.delete');
 });
