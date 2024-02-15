@@ -12,7 +12,7 @@
         <form method="post" action="{{ route('jobs.update', $listing) }}">
             @csrf
             <div class="form-group">
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="company" class="form-label text-lg">Company Name</label>
                     <input
                         id="company"
@@ -27,7 +27,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="title" class="form-label text-lg">Job Title</label>
                     <input
                         id="title"
@@ -43,7 +43,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="location" class="form-label text-lg">Job Location</label>
                     <input
                         id="location"
@@ -58,7 +58,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="email" class="form-label text-lg">Contact Email</label>
                     <input
                         id="email"
@@ -73,7 +73,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="website" class="form-label text-lg">Website/Application URL</label>
                     <input
                         id="website"
@@ -90,7 +90,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="tags" class="form-label text-lg">Tags (Comma Separated)</label>
                     <input
                         id="tags"
@@ -105,13 +105,13 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="logo" class="form-label text-lg">Company Logo</label>
                     <input
                         id="logo"
                         name="logo"
                         type="file"
-                        class="input-file max-w-full border border-[#767676] bg-transparent file:bg-[#9750DD] file:text-white"
+                        class="input-file max-w-full bg-transparent file:bg-[#9750DD] border border-[#767676] file:text-white"
                     />
                     @error('logo')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
@@ -119,7 +119,7 @@
                         </label>
                     @enderror
                 </div>
-                <div class="form-field relative mb-2 pb-2">
+                <div class="form-field mb-2 relative pb-2">
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
                         id="description"
@@ -136,16 +136,16 @@
                         </label>
                     @enderror
                 </div>
-                <div class="btn-group btn-group-scrollable mt-2 flex">
+                <div class="flex mt-2 btn-group btn-group-scrollable">
                     <div class="form-control">
                         <button type="submit">
-                            <span class="btn btn-secondary rounded-none rounded-l-lg text-base">Edit Gig</span>
+                            <span class="btn btn-secondary text-base rounded-none rounded-l-lg">Edit Gig</span>
                         </button>
                     </div>
                     <div>
                         <a
                             href="{{ url()->previous() }}"
-                            class="btn btn-solid-secondary rounded-none rounded-r-lg text-base"
+                            class="btn btn-solid-secondary text-base rounded-none rounded-r-lg"
                         >
                             Back
                         </a>
