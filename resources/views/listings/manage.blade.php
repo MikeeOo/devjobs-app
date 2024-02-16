@@ -6,11 +6,9 @@
         <div class="mx-auto w-full max-w-screen-md overflow-x-auto">
             <table class="table">
                 <tr>
-                    <th>Type</th>
-                    <th></th>
-                    <th></th>
-                    {{-- <th>Where</th> --}}
-                    {{-- <th>Description</th> --}}
+                    <th>Listing Title</th>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tbody>
                     @foreach ($listings as $listing)
