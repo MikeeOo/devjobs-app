@@ -57,7 +57,7 @@ class ListingController extends Controller
     {
         $this->listingRepository->update($listing, $request->all());
 
-        return redirect(route('index'))->with('success', 'Listing updated successfully!');
+        return redirect(route('index'))->with('success', "$request->title updated!");
     }
 
     public function delete(Listing $listing): RedirectResponse
