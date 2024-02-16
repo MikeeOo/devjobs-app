@@ -17,6 +17,7 @@
                     <input
                         id="company"
                         name="company"
+                        value="{{ $listing->company }}"
                         type="text"
                         placeholder="e.g., Acme Corp"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
@@ -48,6 +49,7 @@
                     <input
                         id="location"
                         name="location"
+                        value="{{ $listing->location }}"
                         type="text"
                         placeholder="e.g., Remote, Boston MA, etc"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
@@ -63,7 +65,8 @@
                     <input
                         id="email"
                         name="email"
-                        type="text"
+                        value="{{ $listing->email }}"
+                        type="email"
                         placeholder="e.g., work@company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
@@ -78,8 +81,9 @@
                     <input
                         id="website"
                         name="website"
-                        type="text"
-                        placeholder="e.g., www.work.company.com"
+                        value="{{ $listing->website }}"
+                        type="url"
+                        placeholder="e.g., https://www.company.com"
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     />
                     @error('website')
@@ -95,6 +99,7 @@
                     <input
                         id="tags"
                         name="tags"
+                        value="{{ $listing->tags }}"
                         type="text"
                         placeholder="e.g. laravel,backend,postgres etc."
                         class="input input-solid max-w-full border border-content3 focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
@@ -123,14 +128,14 @@
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
                         id="description"
-                        name="body"
+                        name="description"
                         rows="10"
                         placeholder="Include tasks, requirements, salary, etc"
                         class="textarea textarea-solid max-w-full focus:border-2 focus:border-secondary focus:placeholder-[#9750DD]"
                     >
 {{ $listing->description }}</textarea
                     >
-                    @error('body')
+                    @error('description')
                         <label class="form-label absolute bottom-0 left-0 translate-y-2/3">
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
