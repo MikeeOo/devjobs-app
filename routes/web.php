@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/jobs/manage', [ListingController::class, 'manage'])->name('listings.manage');
     Route::get('/jobs/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
     Route::post('/jobs/{listing}', [ListingController::class, 'update'])->name('listings.update');
-    Route::get('/jobs/{job}/delete', [ListingController::class, 'delete'])->name('jobs.delete');
+    Route::get('/jobs/{listing}/delete', [ListingController::class, 'delete'])->name('jobs.delete');
 });
 
 Route::get('/jobs/{listing}', [ListingController::class, 'show'])->name('listings.show');
