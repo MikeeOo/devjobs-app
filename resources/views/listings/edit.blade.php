@@ -9,7 +9,7 @@
             <h2 class="mb-1 text-2xl font-bold uppercase">Edit Gig</h2>
             <p class="mb-4">Edit: {{ $listing->title }}</p>
         </header>
-        <form method="post" action="{{ route('jobs.update', $listing) }}">
+        <form method="post" action="{{ route('listings.update', $listing) }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <div class="form-field mb-2 relative pb-2">
