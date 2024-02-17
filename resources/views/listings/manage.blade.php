@@ -25,7 +25,7 @@
                                 </a>
                             </td>
                             <td class="text-lg">
-                                <a href="{{ route('jobs.delete', $listing) }}" class="btn btn-solid-error">
+                                <a href="{{ route('listings.delete', $listing) }}" class="btn btn-solid-error">
                                     <i class="fa-solid fa-trash-can pr-1"></i>
                                     Delete
                                 </a>
