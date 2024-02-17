@@ -36,6 +36,6 @@ class ListingRepository implements IRepository
 
     public function delete($listing)
     {
-        return $listing->delete($listing);
+        return $listing->delete();
     }
 }
