@@ -64,6 +64,6 @@ class ListingController extends Controller
     {
         $this->listingRepository->delete($listing);
 
-        return redirect(route('index'))->with('success', 'Listing DESTROYED BUHAHAHA!!!');
+        return redirect(route('index'))->with('success', 'Listing deleted successfully!');
     }
 }
