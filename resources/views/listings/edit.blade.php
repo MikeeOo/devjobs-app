@@ -124,6 +124,11 @@
                         </label>
                     @enderror
                 </div>
+                <img
+                    src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : asset('storage/images/' . $listing->logo) }}"
+                    alt="logo"
+                    class="block rounded-lg w-48 h-48"
+                />
                 <div class="form-field mb-2 relative pb-2">
                     <label for="description" class="form-label text-lg">Job Description</label>
                     <textarea
