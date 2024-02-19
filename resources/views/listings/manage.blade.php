@@ -25,10 +25,31 @@
                                 </a>
                             </td>
                             <td class="text-lg">
-                                <a href="{{ route('listings.delete', $listing) }}" class="btn btn-solid-error">
+                                <label for="modal-{{ $listing->id }}" class="btn btn-solid-error">
                                     <i class="fa-solid fa-trash-can pr-1"></i>
-                                    Delete
-                                </a>
+                                    Delete {{ $listing->id }}
+                                </label>
+                                <input id="modal-{{ $listing->id }}" type="checkbox" class="modal-state" />
+                                <div class="modal">
+                                    <label for="modal-{{ $listing->id }}" class="modal-overlay"></label>
+                                    <div class="modal-content flex flex-col gap-5">
+                                        <h2 class="text-xl">
+                                            <span class="text-warning">Delete:</span>
+                                            "{{ $listing->title }}"
+                                            <span class="text-warning">?</span>
+                                        </h2>
+                                        <div class="flex gap-3">
+                                            <a
+                                                href="{{ route('listings.delete', $listing) }}"
+                                                class="btn btn-solid-error"
+                                            >
+                                                <i class="fa-solid fa-trash-can pr-1"></i>
+                                                Delete
+                                            </a>
+                                            <label for="modal-{{ $listing->id }}" class="btn btn-block">Cancel</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     @endforeach
