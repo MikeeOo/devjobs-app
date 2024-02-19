@@ -6,6 +6,7 @@ use App\Interfaces\IRepository;
 use App\Models\Listing;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Str;
 
 class ListingRepository implements IRepository
 {
@@ -26,7 +27,14 @@ class ListingRepository implements IRepository
 
     public function create($data)
     {
-        return Listing::create($data);
+        if ($data->hasFile('logo')) {
+            $logoUniqueName = Str::uuid().'_'.time().'_'.$data->logo->getClientOriginalName();
+            $data->file('logo')->storeAs('images', $logoUniqueName, 'public');
+
+            return Listing::create([...$data->all(), 'logo' => $logoUniqueName]);
+        } else {
+            return Listing::create($data->all());
+        }
     }
 
     public function update($listing, $data)
