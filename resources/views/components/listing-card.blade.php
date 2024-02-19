@@ -6,7 +6,7 @@
         @if ($listing->logo)
             <img
                 src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : url('storage/images/' . $listing->logo) }}"
-                alt=""
+                alt="logo"
                 class="hidden md:block rounded-l-lg w-48 h-48"
             />
         @endif
