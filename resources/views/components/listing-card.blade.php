@@ -5,7 +5,7 @@
     <div class="flex">
         @if ($listing->logo)
             <img
-                src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : url('storage/images/' . $listing->logo) }}"
+                src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : asset('storage/images/' . $listing->logo) }}"
                 alt="logo"
                 class="hidden md:block rounded-l-lg w-48 h-48"
             />
