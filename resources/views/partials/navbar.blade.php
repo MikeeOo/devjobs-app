@@ -22,6 +22,13 @@
 
             @auth
                 <li>
+                    <span class="text-sm">
+                        Welcome:
+                        <span class="font-bold">{{ auth()->user()->name }}</span>
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                </li>
+                <li>
                     <a
                         href="{{ route('listings.manage') }}"
                         class="link navbar-item text-sm text-content1 link-underline-hover"
