@@ -47,7 +47,9 @@
                                                 <i class="fa-solid fa-trash-can pr-1"></i>
                                                 Delete
                                             </a>
-                                            <label for="modal-{{ $listing->id }}" class="btn btn-block">Cancel</label>
+                                            <label for="modal-{{ $listing->id }}" class="btn btn-block">
+                                                Cancel
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
