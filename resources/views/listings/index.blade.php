@@ -40,6 +40,8 @@
                 <p>No listings found</p>
             </div>
         @endif
-        <div class="mt-6 p-4 mb-20">{{ $listings->links('vendor.pagination.tailwind') }}</div>
+        <div class="mt-6 p-4 mb-20">
+            {{ $listings->appends(request()->query())->links('vendor.pagination.tailwind') }}
+        </div>
     </div>
 @endsection

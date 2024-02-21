@@ -25,12 +25,14 @@ class Listing extends Model
     public function scopeFilter(Builder $query, array $scopeParams): void
     {
         if (isset($scopeParams['tag'])) {
-            $query->where('tags', 'like', '%'.request('tag').'%');
+            $query->where('tags', 'like', '%'.$scopeParams['tag'].'%');
         }
         if (isset($scopeParams['search'])) {
-            $query->where('title', 'like', '%'.request('search').'%')
-                ->orWhere('tags', 'like', '%'.request('search').'%')
-                ->orWhere('description', 'like', '%'.request('search').'%');
+            $query->where(function ($query) use ($scopeParams) {
+                $query->where('title', 'like', '%'.$scopeParams['search'].'%')
+                    ->orWhere('tags', 'like', '%'.$scopeParams['search'].'%')
+                    ->orWhere('description', 'like', '%'.$scopeParams['search'].'%');
+            });
         }
     }
 }

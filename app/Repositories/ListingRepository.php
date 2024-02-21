@@ -10,28 +10,10 @@ use Illuminate\Support\Str;
 
 class ListingRepository implements IRepository
 {
-    public function getAll(): Collection
+    public function getAll(array $scopeParams, int $perPage, int $onEachSide, ?object $relation = null): LengthAwarePaginator
     {
-        return Listing::all();
-    }
-
-    public function getScopedAndPaginated($scopeParams, $perPage, $onEachSide): LengthAwarePaginator
-    {
-        return Listing::latest()->filter($scopeParams)->paginate($perPage)->onEachSide($onEachSide);
-    }
-
-    public function getById($id)
-    {
-        return Listing::find($id);
-    }
-
-    public function create($data)
-    {
-        if ($data->hasFile('logo')) {
-            $logoUniqueName = Str::uuid().'_'.time().'_'.$data->logo->getClientOriginalName();
-            $data->file('logo')->storeAs('images', $logoUniqueName, 'public');
-
-            return Listing::create([...$data->all(), 'logo' => $logoUniqueName]);
+        if ($relation) {
+            $data = $relation->latest();
         } else {
             return Listing::create($data->all());
         }

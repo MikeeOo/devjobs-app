@@ -2,11 +2,11 @@
 
 namespace App\Interfaces;
 
+use Illuminate\Pagination\LengthAwarePaginator;
+
 interface IRepository
 {
-    public function getAll();
-
-    public function getScopedAndPaginated($scopeParams, $perPage, $onEachSide);
+    public function getAll(array $scopeParams, int $perPage, int $onEachSide, ?object $relation = null): LengthAwarePaginator;
 
     public function getById($id);
 

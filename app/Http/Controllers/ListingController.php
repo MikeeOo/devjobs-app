@@ -19,7 +19,7 @@ class ListingController extends Controller
 
     public function index(): View
     {
-        $listings = $this->listingRepository->getScopedAndPaginated(request(['tag', 'search']), 8, 1);
+        $listings = $this->listingRepository->getAll(request()->all(), 8, 1);
 
         return view('listings.index', compact('listings'));
     }
