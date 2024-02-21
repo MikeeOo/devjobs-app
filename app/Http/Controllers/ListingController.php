@@ -43,7 +43,7 @@ class ListingController extends Controller
 
     public function manage(): View
     {
-        $listings = $this->listingRepository->getScopedAndPaginated(request(['tag', 'search']), 8, 1);
+        $listings = $this->listingRepository->getAll([], 8, 1, auth()->user()->listings());
 
         return view('listings.manage', compact('listings'));
     }
@@ -55,7 +55,7 @@ class ListingController extends Controller
 
     public function update(ListingRequest $request, Listing $listing): RedirectResponse
     {
-        $this->listingRepository->update($listing, $request->all());
+        $this->listingRepository->update($listing, $request);
 
         return redirect(route('index'))->with('success', "$request->title updated!");
     }
