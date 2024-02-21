@@ -5,12 +5,13 @@
     <div class="mx-4">
         <div class="mx-auto w-full max-w-screen-md overflow-x-auto">
             <table class="table">
-                <tr>
-                    <th>Listing Title</th>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tbody>
+                @if (count($listings))
+                    <tr>
+                        <th>Listing Title</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tbody>
                     @foreach ($listings as $listing)
                         <tr>
                             <td class="text-lg">
@@ -53,7 +54,14 @@
                             </td>
                         </tr>
                     @endforeach
-                </tbody>
+                    @else
+                        <tr class="border-gray-300">
+                            <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                <p class="text-center">No Listings Found</p>
+                            </td>
+                        </tr>
+                    @endif
+                    </tbody>
             </table>
             <div class="mt-6 p-4 mb-20">{{ $listings->links('vendor.pagination.tailwind') }}</div>
         </div>
