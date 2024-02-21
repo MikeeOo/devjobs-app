@@ -8,11 +8,9 @@ interface IRepository
 {
     public function getAll(array $scopeParams, int $perPage, int $onEachSide, ?object $relation = null): LengthAwarePaginator;
 
-    public function getById($id);
+    public function store(object $request): void;
 
-    public function create($data);
+    public function update(object $resource, object $request): void;
 
-    public function update($listing, $data);
-
-    public function delete($listing);
+    public function delete(object $resource): void;
 }
