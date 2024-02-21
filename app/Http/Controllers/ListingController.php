@@ -31,7 +31,7 @@ class ListingController extends Controller
 
     public function store(ListingRequest $request): RedirectResponse
     {
-        $this->listingRepository->create($request);
+        $this->listingRepository->store($request);
 
         return redirect(route('index'))->with('success', 'Listing created successfully!');
     }
