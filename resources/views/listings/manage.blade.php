@@ -28,7 +28,7 @@
                             <td class="text-lg">
                                 <label for="modal-{{ $listing->id }}" class="btn btn-solid-error">
                                     <i class="fa-solid fa-trash-can pr-1"></i>
-                                    Delete {{ $listing->id }}
+                                    Delete
                                 </label>
                                 <input id="modal-{{ $listing->id }}" type="checkbox" class="modal-state" />
                                 <div class="modal">
