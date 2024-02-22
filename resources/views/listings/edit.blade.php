@@ -3,6 +3,7 @@
 @section('content')
     <script type="module">
         handleErrors();
+        imagePreview();
     </script>
     <div class="mx-auto w-11/12 max-w-md py-6">
         <header class="text-center">
@@ -125,7 +126,8 @@
                     @enderror
                 </div>
                 <img
-                    src="{{ str_starts_with($listing->logo, 'https://via.placeholder.com/') ? $listing->logo : asset('storage/images/' . $listing->logo) }}"
+                    id="image-preview"
+                    src="{{ $listing->logo ? asset('storage/images/' . $listing->logo) : asset('storage/images/placeholder.png') }}"
                     alt="logo"
                     class="block rounded-lg w-48 h-48"
                 />
