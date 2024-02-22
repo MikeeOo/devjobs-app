@@ -35,7 +35,7 @@ class ListingFactory extends Factory
             'email' => fake()->companyEmail(),
             'website' => fake()->url(),
             'tags' => $this->csv(),
-            'logo' => fake()->imageUrl(500, 500, 'cities'),
+            'logo' => null,
             'description' => fake()->paragraphs(4, true),
         ];
     }
