@@ -28,5 +28,16 @@ export const handleFlashMessage = () => {
 };
 
 export const imagePreview = () => {
-    console.log("WORKS");
+    const imageInput = document.getElementById("logo");
+    const showPreview = (e) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const img = document.getElementById("image-preview");
+            img.src = reader.result;
+            img.classList.remove("hidden");
+            img.classList.add("block");
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    };
+    imageInput.addEventListener("change", showPreview);
 };

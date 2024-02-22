@@ -124,6 +124,8 @@
                             <span class="form-label-alt text-error font-bold">{{ $message }}</span>
                         </label>
                     @enderror
+
+                    <img id="image-preview" src="" alt="Logo Preview" class="hidden rounded-lg mt-6 w-48 h-48" />
                 </div>
                 <div class="form-field mb-2 relative pb-2">
                     <label for="description" class="form-label text-lg">Job Description</label>
