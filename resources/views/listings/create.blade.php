@@ -3,6 +3,7 @@
 @section('content')
     <script type="module">
         handleErrors();
+        imagePreview();
     </script>
     <div class="w-11/12 max-w-md mx-auto py-6">
         <header class="text-center">

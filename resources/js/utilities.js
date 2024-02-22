@@ -26,3 +26,7 @@ export const handleFlashMessage = () => {
         count = 0;
     });
 };
+
+export const imagePreview = () => {
+    console.log("WORKS");
+};
