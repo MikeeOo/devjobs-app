@@ -43,9 +43,9 @@ class ListingRepository implements IRepository
             $logoUniqueId = $this->getLogoUniqueId($request->logo->getClientOriginalName());
             $this->storeLogo($request->file('logo'), $logoUniqueId);
             $resource->update([...$request->all(), 'logo' => $logoUniqueId]);
+        } else {
+            $resource->update($request->all());
         }
-
-        $resource->update($request->all());
     }
 
     public function delete(object $resource): void
@@ -73,7 +73,7 @@ class ListingRepository implements IRepository
         $file->storeAs('images', $logoUniqueId, 'public');
     }
 
-    private function deleteLogo(object $storage, string $logoUniqueId): void
+    private function deleteLogo(object $storage, ?string $logoUniqueId): void
     {
         if ($storage->exists("images/$logoUniqueId") && $logoUniqueId) {
             $storage->delete("images/$logoUniqueId");
