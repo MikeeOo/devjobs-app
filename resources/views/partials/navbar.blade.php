@@ -2,8 +2,8 @@
     <div class="w-full max-w-screen-xl m-auto flex">
         <div class="navbar-start">
             <a href="/" class="btn btn-ghost text-2xl navbar-item">
-                <span class="text-secondary font-bold">DEV</span>
-                JOBS
+                JO
+                <span class="text-secondary font-bold">BS</span>
             </a>
         </div>
         <ul class="navbar-end uppercase">
