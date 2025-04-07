@@ -2,7 +2,7 @@
     <div class="w-11/12 max-w-screen-xl m-auto flex">
         <div class="navbar-start space-x-2">
             <a
-                href="https://github.com/MikeeOo/devjobs-app"
+                href="https://github.com/MikeeOo/jobs"
                 class="btn btn-outline-secondary btn-xs btn-circle text-base text-content1"
             >
                 <i class="fa-brands fa-github"></i>
