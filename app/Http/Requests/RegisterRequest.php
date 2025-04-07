@@ -24,7 +24,7 @@ class RegisterRequest extends FormRequest
         return [
             'name' => 'required|min:2|max:255',
             'surname' => 'required|min:2|max:255',
-            'login' => 'unique:users|min:2|max:255',
+            'login' => 'unique:users|max:255',
             'email' => 'required|unique:users|email|max:255',
             'password' => 'required|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/',
             'password_repeat' => 'required|same:password',
